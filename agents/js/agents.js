@@ -173,16 +173,59 @@ window.addEventListener("DOMContentLoaded", function(){
         step5Options_01.forEach(option => {
             option.addEventListener('click', () => {
                 option5_01.value = option.getAttribute('data-step5-01');
-
-                console.log(option.getAttribute('data-step5-01'));
-                console.log(option5_01.value);
     
                 step5_01.classList.remove('active');
                 section1.classList.remove('active');
                 section2.classList.add('active');
                 progressStep[5].classList.add('on');
+                loadingAni();
             });
         });
+        
+
+        function loadingAni() {
+            const loadingBox = document.getElementById('loadingBox');
+            const resultBox = document.getElementById('resultBox');
+
+            const personList = document.getElementById('personList');
+            const items = gsap.utils.toArray(personList.querySelectorAll('li'));
+
+            const tl = gsap.timeline()
+            .from(items, {
+                scale: 0.5,
+                // repeat: -1,
+                // yoyo : true,
+                stagger: {
+                    each: 0.5,
+                    //repeatDelay : 1.5
+                },
+                ease: "Power3.inOut",
+                transformOrigin:"50% 50%",
+
+            })
+
+            const checkList = document.getElementById('checkList');
+            const checks = checkList.querySelectorAll('li');
+
+            tl.eventCallback('onUpdate', function() {
+                if ( tl.progress() >= 0 && tl.progress() <= 0.3333 ) {
+                    checks.forEach(function(check){
+                        check.classList.remove('ani');
+                    });
+                    
+                    checks[0].classList.add('ani');
+                } else if ( tl.progress() >= 0.3333 && tl.progress() <= 0.666 ) {
+                    checks[1].classList.add('ani');
+                } else {
+                    checks[2].classList.add('ani');
+                }
+            })
+
+            tl.eventCallback('onComplete', function() {
+                loadingBox.classList.remove('active');
+                resultBox.classList.add('active');
+            });
+        }
     
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault(); // prevent reload

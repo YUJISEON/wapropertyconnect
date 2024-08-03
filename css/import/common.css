@@ -6,6 +6,10 @@ html {
     font-family: var(--font-family-base);
 }
 
+body {
+    background: #f1f1f1;
+}
+
 #header, 
 #footer {
     width:100%;
@@ -190,6 +194,12 @@ html {
 /* ==================================================
 	header
 ================================================== */
+
+#header {
+    background: var(--header-bg-color);
+    box-shadow: var(--shd, 0 0 5px rgba(0, 0, 0, .5));
+    transition: all .3s ease;
+}
 
 #header .logo {
     font-size: var(--rem-35px);

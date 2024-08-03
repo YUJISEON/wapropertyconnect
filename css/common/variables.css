@@ -47,7 +47,7 @@
     --sub-mobile-visual-height: 150px;
 
     /*header*/
-    --header-bg-color: #FFF;  
+    --header-bg-color: #fff;  
     --header-bg-color-fixed : rgba(255, 255, 255, .15);                           
     --header-sitemap-btn-color: #333;                           
     --header-sitemap-btn-color-on: #333;                         
@@ -96,6 +96,9 @@
     --footer-address-color: #ababab;  
     --footer-link-color: #fff;          
     --footer-link-color-hover: rgba(255, 255, 255, 0.7);
+
+    /*rest*/
+    --shd: 0 0 5px rgba(0, 0, 0, 0.5);
 
     /*rem size*/
     --rem-10px : 0.625rem;

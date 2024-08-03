@@ -64,8 +64,7 @@ window.addEventListener("DOMContentLoaded", function(){
         } 
 
         postValue = input.value;
-        location.replace('/agents/finder.html');
-
+        location.replace('/wapropertyconnect/agents/finder.html');
     });
 
 

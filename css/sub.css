@@ -91,14 +91,248 @@
 }
 
 
+/* ==================================================
+	finder
+================================================== */
 
-.img-person {
-    width: 50px;
-    height: 50px;
+#subPage.finder section,
+#subPage.finder .sub-section-02 .toggle-box {
+    display: none;
 }
 
-.img-person img {
+#subPage.finder section.active,
+#subPage.finder .sub-section-02 .toggle-box.active {
+    display: block;
+}
+
+.progress-box li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background : var(--base-color-hover);
+}
+
+.progress-box li.on {
+    background : var(--base-color);
+}
+
+.progress-box li + li {
+    margin-left: 10px;
+}
+
+.step-box {
+    display: none;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: var(--rem-40px) auto 0;
+}
+
+.step-box.active {
+    display: block;
+}
+
+.back {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 20px;
+    color: var(--point-color);
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.back::before {
+    content: "\f060";
+    display: block;
+    clear: both;
+    position: absolute;
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%);  
+    -webkit-transform: translateY(-50%); 
+    -o-transform: translateY(-50%);  
+    -ms-transform: translateY(-50%);  
+    -moz-transform: translateY(-50%);
+    font-family: "FontAwesome"; 
+    font-size: 12px;
+    color: var(--point-color);
+}
+
+.step-box > h2,
+.loading-box h2 {
+    font-size: var(--rem-35px);
+}
+
+.step-box > p,
+.sel-list.full > div p {
+    font-size: var(--rem-18px);
+    margin-top: 10px;
+}
+
+.sel-list {
+    margin-top: 40px;
+}
+
+.sel-list > div {
+    position: relative;
+    transition:all .4s ease; 
+    -webkit-transition:all .4s ease; 
+    -ms-transition:all .4s ease; 
+    -moz-transition:all .4s ease; 
+    -o-transition:all .4s ease; 
+    cursor: pointer;
+}
+
+.sel-list > div:hover {
+    top: -10px;
+}
+
+.sel-list > div .row {
+    width: 100%;
+    min-height: 235px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.07);
+}
+
+.sel-list .col-inner figure {
+    padding: 0;
+    margin: 0;
+    font-size: var(--rem-50px);
+    line-height: 1;
+    color: var(--point-color);
+}
+
+.sel-list .col-inner span {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--rem-20px);
+    line-height: 1;
+}
+
+.sel-list .col-inner span em {
+    display: block;
+    margin-top: 20px;
+    font-size: var(--rem-16px);
+    line-height: 1;
+}
+
+.sel-list.full > div,
+.result-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--rem-50px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.07);
+}
+
+.sel-list.full > div p +  p {
+    margin-top: 40px;
+}
+
+.sel-list.full > div .btn-here{
+    width: 200px;
+    margin: var(--rem-50px) auto 0;
+}
+
+.loading-box > div {
+    margin-top: var(--rem-40px);
+}
+
+.person-list .img-person {
+    width: 120px;
+    height: 120px;
+    margin-top: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.person-list .img-person img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+.check-list {
+    margin-top: 50px;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: var(--rem-18px);
+    line-height: 1;
+    color: var(--base-color-hover);
+}
+
+.check-list li + li {
+    margin-top: 20px;
+}
+
+.check-list li b {
+    position: relative;
+    display: block;
+    clear: both;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 50%;
+    border: 1px solid var(--base-color);
+}
+
+.check-list li b::before {
+    content: "\f00c";
+    display: none;
+    clear: both;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    -webkit-transform: translate(-50%, -50%);  
+    -o-transform: translate(-50%, -50%); 
+    -ms-transform: translate(-50%, -50%);  
+    -moz-transform: translate(-50%, -50%);
+    font-family: "FontAwesome"; 
+    font-size: 12px;
+    color: #fff;
+}
+
+.check-list li.ani b {
+    background: var(--base-color);
+}
+
+.check-list li.ani b::before {
+    display: block;
+}
+
+.result-box .input-box + .input-box {
+    margin-top: 10px;
+}
+
+.result-box .input-box input {
+    width: 100%;
+}
+
+.result-box span {
+    font-size: 14px;
+}
+
+.btn-submit {
+    height: var(--rem-60px);
+    line-height: var(--rem-60px);
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* ==================================================
+	clculator
+================================================== */

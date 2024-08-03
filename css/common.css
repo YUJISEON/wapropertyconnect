@@ -10,6 +10,7 @@ html {
 
 body {
     background: #f1f1f1;
+    color: var(--font-color-base);
 }
 
 #header, 
@@ -257,6 +258,26 @@ body {
 input, 
 select {
     font-size: var(--rem-18px);
+    height: var(--rem-40px);
+    padding: 0px var(--rem-20px);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(141 169 168 / 80%) !important;
+    background-color: #ffffff;
+}
+
+.btn {
+    display: block;
+    height: var(--rem-40px);
+    line-height: var(--rem-40px);
+    background-color: var(--base-color);
+    color: #fff !important;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: var(--rem-16px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 

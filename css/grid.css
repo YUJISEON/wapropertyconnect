@@ -1407,3 +1407,27 @@
     -ms-flex-direction: column  !important;
     flex-direction: column !important;
 }
+
+.gap-20 {
+    margin-top: - var(--rem-20px);
+    margin-left: - var(--rem-20px);
+    box-sizing: border-box;
+}
+
+.gap-20 > * {
+    padding-top: var(--rem-20px);
+    padding-left: var(--rem-20px);
+    box-sizing: border-box;
+}
+
+.gap-10 {
+    margin-top: - var(--rem-10px);
+    margin-left: - var(--rem-10px);
+    box-sizing: border-box;
+}
+
+.gap-10 > * {
+    padding-top: var(--rem-10px);
+    padding-left: var(--rem-10px);
+    box-sizing: border-box;
+}

@@ -115,3 +115,8 @@ img {
  vertical-align:middle; 
 }
 legend, caption{display:none;}
+
+figure {
+   padding: 0;
+   margin: 0;
+}

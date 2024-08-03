@@ -231,9 +231,12 @@ window.addEventListener("DOMContentLoaded", function(){
             event.preventDefault(); // prevent reload
         
             var formData = new FormData(this);
-            formData.append('service_id', 'service_berj6c8');
-            formData.append('template_id', 'template_v42hb05');
-            formData.append('user_id', 'nmWuFqNcSu-nC5H9Z');
+            // formData.append('service_id', 'service_berj6c8');
+            // formData.append('template_id', 'template_v42hb05');
+            // formData.append('user_id', 'nmWuFqNcSu-nC5H9Z');
+            formData.append('service_id', 'service_ez7fo8u');
+            formData.append('template_id', 'template_j98y5yb');
+            formData.append('user_id', 'Uwlpc8XZC0VSGFsVJ');
         
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'https://api.emailjs.com/api/v1.0/email/send-form', true);

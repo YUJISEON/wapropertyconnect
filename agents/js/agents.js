@@ -48,13 +48,24 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-
     suggestionsList.addEventListener('click', function(e) {
-
         if (e.target && e.target.nodeName === 'LI') {
             input.value = e.target.innerText;
             suggestionsList.innerHTML = '';
         }
+    });
+
+    let postValue = '';
+
+    searchBtn.addEventListener('click', function(e) {
+        if (!input.value) {
+            alert('Enter your postcode..');
+            return false;
+        } 
+
+        postValue = input.value;
+        location.replace('/agents/finder.html');
+
     });
 
 

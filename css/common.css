@@ -26,8 +26,11 @@ body {
 
 .body  {
     width:100%; 
+    padding: var(--rem-80px) 0;
     box-sizing:border-box; 
 }
+
+
 
 /* ==================================================
                     Utility
@@ -256,6 +259,11 @@ select {
     font-size: var(--rem-18px);
 }
 
+
+.serif {
+    font-family: var(--font-family-serif);
+}
+
 /* ==================================================
 	header
 ================================================== */
@@ -264,6 +272,10 @@ select {
     background: var(--header-bg-color);
     box-shadow: var(--shd, 0 0 5px rgba(0, 0, 0, .5));
     transition: all .3s ease;
+}
+
+#header .body {
+    padding: 0;
 }
 
 #header .logo {

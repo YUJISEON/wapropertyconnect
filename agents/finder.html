@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA PROPERTY CONNECT</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- swiper aimation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script rel="stylesheet" src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
+    <!-- Font Awesome -->    
+    <script src="https://kit.fontawesome.com/326da5bcc4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="body">
+            <div class="inner row align-items-center justify-content-between">
+                <h1 class="logo">
+                    <a href="index.html" class="a-link">
+                        WA PROPERTY CONNECT 
+                        <span>valuation & Advisor</span>
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <h2 class="txt-r">CALL US TODAY (08) 9486 0000</h2>
+                    <ul class="gnb-items clearFix">
+                        <li><a href="../index.html" class="a-link">Home</a></li>
+                        <li class="on"><a href="./agents/index.html" class="a-link">Find agents</a></li>
+                        <li><a href="../clculator/index.html" class="a-link">Commission Clculator</a></li>
+                        <li><a href="../news/index.html" class="a-link">Realestate News</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+    <main id="subPage" class="finder">
+        <section class="sub-section-01">
+            <div class="body">
+                <div class="inner">
+                    <div class="con-wrap">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div id="step1" class="step-box on">
+                            <h2>Compare agents in Perth to help me:</h2>
+                            <p>We'll compare <b>46+ agents</b> who have sold 746+ properties in Perth over the last 12 months</p>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step1="Sell">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Sell</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step1="Buy">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Buy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step1="Rent">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Rent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step1="Other">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Other</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                        <div id="step2-01" class="step-box">
+                            <h2>Find agents in Perth that have sold:</h2>
+                            <P>Some agents have had more recent success with particular property types</P>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-4">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-01="Only Buy">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Only Buy <br>(e.g First home, investor)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-01="Sell & Buy">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Sell & Buy <br>(E.g downsizing, Upgrading)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-01="Only Sell">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Only Sell <br>E.g investor personal reason)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <div id="step2-02" class="step-box">
+                            <h2>Find agents in Perth that have sold:</h2>
+                            <P>Some agents have had more recent success with particular property types</P>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-02="Houses">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Houses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-02="Apartments/Units">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Apartments/Units</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-02="Land">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Land</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-02="Other">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Other</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div id="step2-03" class="step-box">
+                            <h2>Find agents in Perth that have sold:</h2>
+                            <P>Some agents have had more recent success with particular property types</P>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-03="Owner">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Owner</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step2-03="Tenant">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Tenant</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                 
+                        <div id="step3" class="step-box">
+                            <h2>Show agents selling at:</h2>
+                            <p>We will identify agents who have experience selling similar properties</p>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step3="Less than $500K">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Less than $500K</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step3="$500K - $1M">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>$500K - $1M</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step3="$1M - $2M">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>$1M - $2M</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step3="$2M+">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>$2M+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step4" class="step-box">
+                            <h2>When would you like to sell?</h2>
+                            <p>A rough timeline helps us compare agents who can achieve the best outcome for you</p>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step4="ASAP">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>ASAP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step4="1-3 Months">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>1-3 Months</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step4="3-6 Months">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>3-6 Months</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step4="12+ Months">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>12+ Months</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step5" class="step-box">
+                            <h2>Why are you looking to sell?</h2>
+                            <p>We will compare agents that match your specific needs and preferences</p>
+                            <div class="sel-list row align-items-center">
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Relocating">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Relocating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Upsizing">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Upsizing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Downsizing">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Downsizing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Investment Property">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Investment Property</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Deceased Estate">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Deceased Estate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-inner" data-step5="Family Reasons">
+                                            <figure>
+                                                <i class="far fa-comment-dots"></i>
+                                            </figure>
+                                            <span>Family Reasons</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step6-01" class="step-box">
+                            <div class="sel-list row justify-content-center align-items-center">
+                                <div class="col-12">
+                                    <p>Sorry, we currently can’t help with inquiries in your area.</p>
+                                    <p>Looking for Selling agents or other real estate services?</p>
+                                    <a href="./index.html">Click Here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step6-02" class="step-box">
+                            <div class="sel-list row justify-content-center align-items-center">
+                                <div class="col-12">
+                                    <p>Sorry, we currently can’t help with inquiries in your area.</p>
+                                    <p>Looking for Selling agents or other real estate services?</p>
+                                    <a href="./index.html">Click Here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section-02">
+            <div class="section-con">
+                <div class="body">
+                    <div class="inner">
+                        <div class="con-wrap">
+                            <h2>Finalizing agent shortlist for Mudlo</h2>
+                            <ul class="person-list">
+                                <li>
+                                    <figure class="img-person">
+                                        <img src="../img/sub/person.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                </li>
+                                <li>
+                                    <figure>
+                                        <img src="" alt="">
+                                    </figure>
+                                </li>
+                            </ul>
+                            <ul class="check-list">
+                                <li>minima ipsa labore, ab officiis sapiente provident molestiae ea. </li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+                                <li>Eligendi omnis fugiat ipsum, nesciunt expedita obcaecati hic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-con">
+                <div class="body">
+                    <div class="inner">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/agents.js"></script>
+</body>
+
+</html>

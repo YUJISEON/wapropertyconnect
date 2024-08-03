@@ -1,3 +1,5 @@
+@charset "utf-8"; 
+
 /* ==================================================
 	공통레이아웃
 ================================================== */
@@ -190,6 +192,69 @@ body {
 .select-drop.slide .list {opacity: 1;top: 40px;-webkit-transform: scale(1) translateY(0px);-ms-transform: scale(1) translateY(0px);transform: scale(1) translateY(0px);display: none;-webkit-transition: none; transition: none;}
 
 
+/***** Size *****/
+
+.wid10{width:10%;}
+.wid20{width:20%;}
+.wid30{width:30%;}
+.wid40{width:40%;}
+.wid50{width:50%;}
+.wid60{width:60%;}
+.wid70{width:70%;}
+.wid80{width:80%;}
+.wid90{width:90%;}
+.wid100{width:100%;}
+
+.hgt10{height:10%;}
+.hgt20{height:20%;}
+.hgt30{height:30%;}
+.hgt40{height:40%;}
+.hgt50{height:50%;}
+.hgt60{height:60%;}
+.hgt70{height:70%;}
+.hgt80{height:80%;}
+.hgt90{height:90%;}
+.hgt100{height:100%;}
+
+.max100 {max-width:100px !important;}
+.max150 {max-width:150px !important;}
+.max200 {max-width:200px !important;}
+.max220 {max-width:220px !important;}
+.max250 {max-width:250px !important;}
+.max300 {max-width:300px !important;}
+.max350 {max-width:350px !important;}
+.max400 {max-width:400px !important;}
+.max450 {max-width:450px !important;}
+.max500 {max-width:500px !important;}
+.max550 {max-width:550px !important;}
+.max600 {max-width:600px !important;}
+.max650 {max-width:650px !important;}
+.max700 {max-width:700px !important;}
+.max750 {max-width:750px !important;}
+.max800 {max-width:800px !important;}
+.max850 {max-width:850px !important;}
+.max900 {max-width:900px !important;}
+.max950 {max-width:950px !important;}
+.max1000 {max-width:1000px !important;}
+
+.min1000 {min-width:1000px !important;}
+.min1100 {min-width:1100px !important;}
+.min1200 {min-width:1200px !important;}
+.min1300 {min-width:1300px !important;}
+.min1400 {min-width:1400px !important;}
+.min1500 {min-width:1500px !important;}
+.min1600 {min-width:1600px !important;}
+.min1700 {min-width:1700px !important;}
+.min1800 {min-width:1800px !important;}
+.min1900 {min-width:1900px !important;}
+.min2000 {min-width:2000px !important;}
+
+/***** input *****/
+
+input, 
+select {
+    font-size: var(--rem-18px);
+}
 
 /* ==================================================
 	header

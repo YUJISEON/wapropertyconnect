@@ -1,0 +1,150 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+
+    /*color*/
+    --base-color: #324158;
+    --base-color-hover: rgb(50, 65, 88, 0.7);
+    --point-color : #be6d54; 
+    --font-base-color : #143852;
+    --bg-base-color : #f1f1f1;
+
+    /*font*/
+    --font-family-base : "Roboto", sans-serif;
+    --font-family-serif : "PT Serif", serif;
+
+    /*nput, textarea, select*/
+    --input-placeholder-color: #cccccc;           
+    --input-placeholder-color-focus: transparent;
+    --input-bg-color: #fff;                       
+    --input-bor-color: #dcdcdc;                   
+    --input-bor-color-focus: --color-base;         
+    --input-color: #cccccc;    
+    
+    /*Breakpoints*/
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 960px;
+    --breakpoint-xl: 1280px;
+
+    /*layout*/
+    --inner-max-width: calc(1400px + 40px);
+    --inner-max-width-big: calc(1400px + 40px);
+    --inner-max-width-small: calc(1400px + 40px);
+
+    /*main visual*/
+    --main-pc-visual-height: 100svh;     
+    --main-tablet-visual-height: 100svh;
+    --main-mobile-visual-height: 100svh;
+
+    /*sub visual*/
+    --sub-pc-visual-height: 270px;     
+    --sub-tablet-visual-height: 270px;
+    --sub-mobile-visual-height: 150px;
+
+    /*header*/
+    --header-bg-color: #FFF;  
+    --header-bg-color-fixed : rgba(255, 255, 255, .15);                           
+    --header-sitemap-btn-color: #333;                           
+    --header-sitemap-btn-color-on: #333;                         
+    --header-sitemap-bg-color: rgba(42, 44, 54, 0.9);            
+    --header-sitemap-bor-color: rgba(205, 208, 215, 0.3);        
+    --header-sitemap-1depth-color: #fff;                         
+    --header-sitemap-1depth-color-hover: #fff;   
+
+    --header-pc-height: 200px;        
+    --header-tablet-height: 150px;   
+    --header-mobile-height: 100px; 
+
+    --contents-pc-padding-top: calc(var(--header-pc-height) + 1px);                
+    --contents-tablet-padding-top: calc(var(--header-tablet-height) + 1px);       
+    --contents-mobile-padding-top: calc(var(--header-mobile-height) + 1px); 
+
+    --header-pc-1depth-color: #3a3d4a;                             
+    --header-pc-1depth-color-hover: var(--color-base);                    
+    --header-pc-2depth-bor-color: rgba(51, 51, 51, 0.7);           
+    --header-pc-2depth-bor-top-color: var(--color-base);                      
+    --header-pc-2depth-bg-color: #f8f8f8;               
+    --header-pc-2depth-bg-color-hover: #000;                        
+    --header-pc-2depth-color: #0d0d0d;                                 
+    --header-pc-2depth-color-hover: #0d0d0d;                         
+    --header-pc-2depth-arrow-color: rgba(255, 255, 255, 0.8);      
+    --header-pc-2depth-arrow-color-hover: rgba(255, 255, 255, 0.8); 
+
+    --header-mobile-gnb-top-color: var(--color-base);     
+    --header-mobile-gnb-bg-color: #fff;         
+    --header-mobile-btn-color: #333;            
+    --header-mobile-btn-color-on: #fff;         
+    --header-mobile-1depth-bg-color: #fff;       
+    --header-mobile-1depth-bg-color-on: #3f3f40; 
+    --header-mobile-1depth-bor-color: #ddd;      
+    --header-mobile-1depth-color: #333;         
+    --header-mobile-1depth-color-on: #fff;       
+    --header-mobile-2depth-bg-color: #e8e8e8;    
+    --header-mobile-2depth-bor-color: #d1d1d1;   
+    --header-mobile-2depth-color: #333;
+
+    /*section*/
+    --section-bg : var(--bg-base-color);
+
+    /*footer*/
+    --footer-bg: var(--bg-base-color);
+    --footer-address-color: #ababab;  
+    --footer-link-color: #fff;          
+    --footer-link-color-hover: rgba(255, 255, 255, 0.7);
+
+    /*rem size*/
+    --rem-10px : 0.625rem;
+    --rem-14px: 0.875rem;
+    --rem-15px : 0.937rem;
+    --rem-16px: 1rem;
+    --rem-18px: 1.125rem;
+    --rem-20px : 1.25rem;
+    --rem-25px : 1.56rem;
+    --rem-30px : 1.875rem;
+    --rem-35px : 2.187rem;
+    --rem-40px : 2.50rem;
+    --rem-45px : 2.812rem;
+    --rem-50px : 3.125rem;
+    --rem-55px : 3.437rem;
+    --rem-60px : 3.75rem;
+    --rem-65px : 4.062rem;
+    --rem-70px : 4.375rem;
+    --rem-75px : 4.687rem;
+    --rem-80px : 5.0rem;
+    --rem-85px : 5.312rem;
+    --rem-90px : 5.625rem;
+    --rem-95px : 5.9375rem;
+    --rem-100px :6.25rem;
+    --rem-105px: 6.5625rem;
+    --rem-110px :6.875rem;
+    --rem-115px : 7.1875rem;
+    --rem-120px : 7.50rem;
+    --rem-125px : 7.8125rem;
+    --rem-130px : 8.125rem;
+    --rem-135px : 8.4375rem;
+    --rem-140px: 8.75rem;
+    --rem-145px: 9.0625rem;
+    --rem-150px : 9.375rem;
+    --rem-160px : 10.00rem;
+    --rem-165px : 10.312rem;
+    --rem-170px: 10.625rem;
+    --rem-175px : 10.937rem;
+    --rem-200px : 12.50rem;
+    --rem-215px : 13.4375rem;
+    --rem-235px : 14.6875rem;
+    --rem-300px : 18.75rem;
+    --rem-315px : 19.68rem;
+    --rem-370px : 23.125rem;
+    --rem-500px : 31.25rem;
+
+    /*반응형 - percent*/
+    --percent-basic : 0.8;
+    --percent-small : 0.6;
+    --percent-big : 1.2;
+    --percent-max : 1.4;
+}

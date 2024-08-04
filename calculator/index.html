@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA PROPERTY CONNECT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- swiper aimation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script rel="stylesheet" src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@6/dist/swiper-animation.umd.min.js"></script>
+    <!-- Font Awesome -->    
+    <script src="https://kit.fontawesome.com/326da5bcc4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="body">
+            <div class="inner row align-items-center justify-content-between">
+                <h1 class="logo">
+                    <a href="index.html" class="a-link">
+                        WA PROPERTY CONNECT 
+                        <span>valuation & Advisor</span>
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <h2 class="txt-r">CALL US TODAY (08) 9486 0000</h2>
+                    <ul class="gnb-items clearFix">
+                        <li><a href="../index.html" class="a-link">Home</a></li>
+                        <li><a href="../agents/index.html" class="a-link">Find agents</a></li>
+                        <li class="on"><a href="./index.html" class="a-link">Commission Calculator</a></li>
+                        <li><a href="../news/index.html" class="a-link">Realestate News</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+    <main id="subPage" class="calculator">
+        <section class="sub-section-01 bg-img">
+            <div class="body">
+                <div class="inner">
+                    <div class="con-wrap">
+                        <div class="con-txt serif">
+                            <h1>Commission Calculator</h1>
+                            <p>Pay the right commission and maximise your sale price</p>
+                        </div>
+                        <div class="calculator-area row justify-content-between">
+                            <div class="col-6">
+                                <div class="calculator-box">
+                                    <ul class="tab">
+                                        <li><a href="javascript:;">Fixed Commission</a></li>
+                                        <li><a href="javascript:;">Tiered Commission</a></li>
+                                    </ul>
+                                    <ul class="cal">
+                                        <li>
+                                            <div class="cal-inner">
+                                                <strong>Perth, WA</strong>
+                                                <h4>Target sale price: $ <b class="basic-price">30,000</b></h4>
+                                                <div id="rangeSliderWrap" class="range-slider-wrap">
+                                                    <div id="rangeSlider" class="range-slider">
+                                                        <span id="handle" class="handle"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="commission">
+                                                    <p>1.74% is the average commission rate in Perth</p>
+                                                    <p><input type="number" name="comm" id="comm">%</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="result-box">
+                                    <div class="box-top">
+                                        <h4>Target sale price: $ <b class="comm-price">30,000</b></h4>
+                                        <h2 class="result-price">$5,896,800</h2>
+                                        <p>
+                                            in your pocket
+                                            <a href="javascript:;" class="tooltip">정보</a>
+                                        </p>
+                                    </div>
+                                    <div class="box-bottom">
+                                        <p>
+                                            <b>Your next step</b> <br>
+                                            Compare top agents and their <br
+                                            >commissions in Perth
+                                        </p>
+                                        <a href="../agents/finder.html" class="btn btn-basic">COMPARE PERTH AGENTS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/calculator.js"></script>
+</body>
+
+</html>

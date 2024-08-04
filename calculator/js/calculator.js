@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", function(){
             changePrice = (maxRange * xPercent(slider[0].x)) * 0.01,
             commValue = parseFloat(comm.value) / 100;
 
+        comm.value = parseFloat(comm.value).toFixed(2);
         rangeSlider.style.width = xPercent(slider[0].x) + '%';
         basicPrice.innerText = formatNumberWithCommas(Math.round(changePrice));
         commPrice.innerText = formatNumberWithCommas(Math.round(commValue*changePrice));
@@ -29,5 +30,7 @@ window.addEventListener("DOMContentLoaded", function(){
         bounds: rangeSliderWrap,
         onDrag: updateSlider,
     });
+
+    comm.addEventListener('input', updateSlider);
 
 });

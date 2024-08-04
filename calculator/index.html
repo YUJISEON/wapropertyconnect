@@ -61,7 +61,7 @@
                                         <li>
                                             <div class="cal-inner">
                                                 <strong>Perth, WA</strong>
-                                                <h4>Target sale price: $ <b class="basic-price">30,000</b></h4>
+                                                <h4>Target sale price: $ <b class="basic-price">0</b></h4>
                                                 <div id="rangeSliderWrap" class="range-slider-wrap">
                                                     <div id="rangeSlider" class="range-slider">
                                                         <span id="handle" class="handle"></span>
@@ -69,7 +69,7 @@
                                                 </div>
                                                 <div class="commission">
                                                     <p>1.74% is the average commission rate in Perth</p>
-                                                    <p><input type="number" name="comm" id="comm">%</p>
+                                                    <p><input type="number" name="comm" id="comm" value="1.74" step="0.01">%</p>
                                                 </div>
                                             </div>
                                         </li>
@@ -79,8 +79,8 @@
                             <div class="col-6">
                                 <div class="result-box">
                                     <div class="box-top">
-                                        <h4>Target sale price: $ <b class="comm-price">30,000</b></h4>
-                                        <h2 class="result-price">$5,896,800</h2>
+                                        <h4>Target sale price: $ <b id="commPrice" class="comm-price">0</b></h4>
+                                        <h2 id="resultPrice" class="result-price">0</h2>
                                         <p>
                                             in your pocket
                                             <a href="javascript:;" class="tooltip">정보</a>

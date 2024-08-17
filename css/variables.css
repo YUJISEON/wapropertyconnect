@@ -102,6 +102,7 @@
     --shd: 0 0 5px rgba(0, 0, 0, 0.5);
 
     /*rem size*/
+    --rem-5px : 0.3125rem;
     --rem-10px : 0.625rem;
     --rem-14px: 0.875rem;
     --rem-15px : 0.937rem;

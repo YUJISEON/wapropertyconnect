@@ -4,6 +4,8 @@
 .row {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 .row-wrap {

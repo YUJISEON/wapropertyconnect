@@ -10,7 +10,7 @@ html {
 
 body {
     background: #f1f1f1;
-    color: var(--font-color-base);
+    color: var(--font-base-color);
 }
 
 #header, 
@@ -18,20 +18,18 @@ body {
     width:100%;
 }
 
-.inner {
+.body  {
     width:100%; 
     max-width: var(--inner-max-width); 
     height:auto; 
     margin:0 auto;
 }
 
-.body  {
+.inner {
     width:100%; 
     padding: var(--rem-80px) 0;
     box-sizing:border-box; 
 }
-
-
 
 /* ==================================================
                     Utility
@@ -290,51 +288,79 @@ select {
 ================================================== */
 
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background: var(--header-bg-color);
     box-shadow: var(--shd, 0 0 5px rgba(0, 0, 0, .5));
     transition: all .3s ease;
+    text-align: center;
 }
 
-#header .body {
-    padding: 0;
+
+#header.fixed {
+    background: rgba(var(--header-bg-color), 0.5);
 }
 
-#header .logo {
+#header .inner {
+    height: var(--header-pc-height);    
+}
+
+#header  .logo {
+    margin-top: var(--rem-30px);
+    font-family: var(--font-family-anton);
     font-size: var(--rem-35px);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
-    color: var(--font-color-base);
+    color: var(--font-base-color);
 } 
 
-
-#header .logo span {
+#header span {
     display: block;
-    font-size: var(--rem-25px);
-    color: #ccc;
+    font-size: var(--rem-20px);
+}
+
+#header span.sub-tit {
+    display: inline-block;
+    padding:  0 var(--rem-10px);
+    margin-top: var(--rem-10px);
+    background: #000;
+    color: #fff;
+}
+
+#header span.call-us {
+    margin-top: var(--rem-20px);
+    font-weight: 600;
 }
 
 #header .gnb {
-    padding-top: var(--rem-80px);
-}
-
-#header .gnb h2 { 
-    font-size: var(--rem-20px);
-    font-weight: 700;
+    width: 980px;
+    margin: var(--rem-20px) auto 0;
 }
 
 #header .gnb > ul {
-    margin-top: var(--rem-10px);
+    width: 100%;
 }
 
 #header .gnb > ul > li {
-    float: left;
-    display: inline-block;
-    padding:  var(--rem-15px) var(--rem-50px);
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    padding:  var(--rem-15px) 0;
     font-size: var(--rem-14px);
     font-weight: 400;
     line-height: 1;
     color: #fff;
     background: var(--base-color);
+}
+
+#header .gnb > ul > li:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+#header .gnb > ul > li:last-child {
+    border-radius: 0 20px 20px 0;
 }
 
 #header .gnb > ul > li > a {

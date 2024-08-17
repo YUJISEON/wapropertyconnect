@@ -9,6 +9,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -22,40 +23,32 @@
     <header id="header">
         <div class="body">
             <div class="inner row align-items-center justify-content-center">
-                <h1 class="logo">
-                    <a href="index.html" class="a-link">
-                        WA PROPERTY CONNECT 
-                        <span>valuation & Advisor</span>
-                    </a>
-                </h1>
-                <nav class="gnb">
-                    <ul class="gnb-items">
-                        <li class="on"><a href="./index.html" class="a-link">Home</a></li>
-                        <li><a href="./agents/index.html" class="a-link">Find agents</a></li>
-                        <li><a href="./calculator/index.html" class="a-link">Commission Calculator</a></li>
-                        <li><a href="./news/index.html" class="a-link">Realestate News</a></li>
-                    </ul>
-                </nav>
+                <div class="col-inner">
+                    <h1 class="logo">
+                        <a href="index.html" class="a-link">WA PROPERTY CONNECT</a>
+                    </h1>
+                    <span class="sub-tit">Helping You with All Your Real Estate Needs in Perth</span>
+                    <span class="call-us">CALL US TODAY (08) 9486 0000</span>
+                    <nav class="gnb">
+                        <ul class="gnb-items row align-items-center justify-content-center">
+                            <li class="on"><a href="./index.html" class="a-link">Home</a></li>
+                            <li><a href="./agents/index.html" class="a-link">Find agents</a></li>
+                            <li><a href="./calculator/index.html" class="a-link">Commission Calculator</a></li>
+                            <li><a href="./news/index.html" class="a-link">Realestate News & Tips</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>    
         </div>
     </header>
+    <script defer src="./js/main.js"></script>
     <main id="mainPage">
         <section class="main-visual">
-            <div class="body">
-                <div class="inner">
-                    <h1>Perth's Best Property Valuation <br>and Advisory Company</h1>
-                    <div class="notice-box">
-                        <div class="box-inner">
-                            <h3>STUNNING 6 BED HOUSE IN THE HEARTOF THE CITY</h3>
-                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
-                            <span>$2,000,000</span>
-                        </div>
-                        <a href="#" class="btn btn-sales">ALL SALES</a>
-                    </div>
-                </div>
+            <div class="parallax-area">
+                <div class="parallax-bg"></div>
             </div>
         </section>
-        <section class="main-section-01">
+        <section class="main-section main-section-01">
             <div class="body">
                 <div class="inner">
                     <div class="con-tit">
@@ -112,7 +105,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-section-02">
+        <section class="main-section main-section-02">
             <div class="body">
                 <div class="inner">
                     <div class="con-tit">
@@ -154,7 +147,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-section-03">
+        <section class="main-section main-section-03">
             <div class="body">
                 <div class="inner">
                     <div class="con-tit">
@@ -206,7 +199,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-section-04">
+        <section class="main-section main-section-04">
             <div class="section-con section-con-01">
                 <div class="body">
                     <div class="inner">
@@ -254,7 +247,7 @@
             </div>
             <div class="section-con section-con-02"></div>
         </section>
-        <section class="main-section-05">
+        <section class="main-section main-section-05">
             <div class="section-con section-con-01">
                 <div class="body">
                     <div class="inner">
@@ -307,7 +300,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-section-06">
+        <section class="main-section main-section-06">
             <div class="body">
                 <div class="inner">
                     <div class="con-wrap">
@@ -349,7 +342,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-section-07">
+        <section class="main-section main-section-07">
             <div class="body">
                 <div class="inner">
                     <div class="con-wrap row justify-content-center align-items-center">

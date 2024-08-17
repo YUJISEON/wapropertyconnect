@@ -40,6 +40,18 @@ window.addEventListener('DOMContentLoaded', function(){
     })
     .catch(error => console.error('Error fetching reviews:', error));
 
+
+    const reviewContainer = document.getElementById('reviews');
+
+    reviews.forEach(review => {
+        const reviewElement = document.createElement('div');
+        reviewElement.innerHTML = `
+            <h4>${review.author_name} - ${review.rating}★</h4>
+            <p>${review.text}</p>
+        `;
+        reviewContainer.appendChild(reviewElement);
+    });
+
     ///////////////////////////////////////////////////
 
     function initMap() {

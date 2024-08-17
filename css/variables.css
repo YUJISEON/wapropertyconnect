@@ -33,9 +33,9 @@
     --breakpoint-xl: 1280px;
 
     /*layout*/
-    --inner-max-width: calc(1400px + 40px);
-    --inner-max-width-big: calc(1400px + 40px);
-    --inner-max-width-small: calc(1400px + 40px);
+    --inner-max-width: calc(1280px + 40px);
+    --inner-max-width-big: calc(1280px + 40px);
+    --inner-max-width-small: calc(1280px + 40px);
 
     /*main visual*/
     --main-pc-visual-height: 100svh;     

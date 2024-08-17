@@ -18,10 +18,12 @@
 ================================================== */
 
 .con-wrap {
-    margin: 0 auto;
+   /* margin: 0 auto; */
 }
 
-.con-txt {}
+.con-txt {
+
+}
 
 .search-area {
     margin-top: 20px;

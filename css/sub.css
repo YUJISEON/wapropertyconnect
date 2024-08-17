@@ -22,7 +22,8 @@
     z-index: -1; 
 }
 
-#subPage.agents .sub-visual .parallax-area .parallax-bg {
+#subPage.agents .sub-visual .parallax-area .parallax-bg,
+#subPage.finder .sub-visual .parallax-area .parallax-bg {
     background-image: url(../img/sub/bg_sub_visual_findagents.jpg);
 }
 

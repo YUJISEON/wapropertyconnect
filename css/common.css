@@ -60,7 +60,7 @@ body {
 .mt-20 { margin-top: 20px !important;}
 .mt-30 { margin-top: 30px !important;}
 .mt-40 { margin-top: 40px !important;}
-.mt-50 { margin-top: 50px !important;}
+.mt-50 { margin-top: var(--rem-50px) !important;}
 
 .mb-5 { margin-bottom: 5px !important;}
 .mb-10 { margin-bottom: 10px !important;}
@@ -192,6 +192,24 @@ body {
     content: '';
     display: block;
     clear: both;
+}
+
+.video-box {
+    width: 100%;
+    padding-bottom: 56.24%;
+    box-sizing: border-box;
+    position: relative;
+    border: 0;
+}
+
+.video-box video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
 }
 
 /**** nice-select ****/
@@ -351,16 +369,22 @@ textarea {
     color: #fff;
 }
 
-.con-wrap {
-    margin-top: var(--rem-30px);
+.con-tit span {
+    display: block;
+    font-size: var(--rem-20px);
+    font-weight: 300;
+}
+
+.con-wrap {    
     padding-top: var(--rem-30px);
 }
 
-.con-wrap.top-line {
+.top-line {
+    margin-top: var(--rem-30px) !important;
     position: relative;
 }
 
-.con-wrap.top-line::before {
+.top-line::before {
     content: '';
     display: block;
     position: absolute;
@@ -373,6 +397,13 @@ textarea {
 
 .con-wrap .con-txt {
     padding: 0 var(--rem-30px) var(--rem-50px);
+    font-size: var(--rem-18px);
+    text-align: center;
+}
+
+
+.con-wrap .txt-add,
+.box-txt {
     font-size: var(--rem-18px);
     text-align: center;
 }
@@ -484,4 +515,215 @@ textarea {
 #footer .inner {
     padding: var(--rem-10px) 0;
     font-size: var(--rem-16px);
+}
+
+
+/* ==================================================
+	box-list
+================================================== */
+
+.box-wrap h3 {
+    margin-bottom: 20px;
+    font-size: var(--rem-30px);
+}
+
+.box-list {
+    gap : 10px
+}
+
+.box-list.item-3 li {    
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+.box-list.item-4 li {    
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.box-list.item-5 li {    
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.box-list .box-inner {
+    box-sizing: border-box;
+    text-align: center;
+    padding: var(--rem-20px);
+}
+
+.box-list .box-inner.padding {
+    padding: var(--rem-20px) var(--rem-20px) var(--rem-100px);
+}
+
+.box-list li figure {
+    text-align: center;
+    font-size: var(--rem-40px);
+}
+
+.box-list li figure.img-box {
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+}
+
+.box-list li figure.img-round {
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    overflow: hidden;
+}
+
+.box-list li figure.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-list li h4 {    
+    margin-top: 10px;
+    font-size: var(--rem-20px);
+    font-weight: 700;
+    line-height: 1.3636;
+}
+
+.box-list li h5 {    
+    margin-top: 10px;
+    font-size: var(--rem-18px);
+    font-weight: 400;
+    line-height: 1.3636;
+}
+
+.box-list li p {
+    margin-top: 10px;
+    font-size: var(--rem-16px);
+    line-height: 1.3636;
+}
+
+.box-list li span {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: var(--rem-35px);
+    font-weight: 700;
+    color: var(--point-color);
+}
+
+.box-list.hover-color li {
+    cursor: pointer;
+}
+
+.box-list.hover-color li:hover h3,
+.box-list.hover-color li:hover h4,
+.box-list.hover-color li:hover p,
+.box-list.hover-color li:hover span {
+    color: var(--point-color);
+}
+
+.box-list li .bg-color-white {
+    padding: var(--rem-20px) var(--rem-20px) var(--rem-80px);
+} 
+
+.box-txt ul li {
+    padding: 0 var(--rem-20px);
+    font-size: var(--rem-18px);
+}
+
+.box-txt ul li strong {
+    display: block;
+}
+
+.bg-color-white .box-list li {
+    background: rgb(193, 211, 228);
+    text-align: center;
+}
+
+.bg-color-white .box-list li p {
+    color: #fff;
+}
+
+.box-list.summary-list {
+    max-width: var(--inner-max-width-small);
+    margin: 0 auto;
+}
+
+.box-wrap.full {
+    padding: var(--rem-20px) var(--rem-50px);
+    background: #f1f1f1;
+}
+
+.box-wrap.full.full-gray li {
+    background: transparent;
+}
+
+.box-wrap.white-box .what-list > li {
+    background: #fff;
+}
+
+.box-wrap.full .box-list {
+    gap: 0;
+}
+
+.box-wrap + .box-wrap {
+    margin-top: var(--rem-30px);
+}
+
+.box-wrap + .box-wrap.top-line {
+    padding-top: var(--rem-30px);
+}
+
+.box-wrap + .con-txt {
+    margin-top: var(--rem-50px);
+    padding-bottom: 0;
+}
+
+
+.contact-box .input-box input,
+.contact-box .input-box textarea  {
+    width: 100%;
+    resize: none;
+}
+
+.contact-box .btn {
+    margin-top: 0;
+    background: var(--base-color);    
+}
+
+.bg-color-point .contact-box .btn {
+    background: var(--bg-base-color);
+    color: var(--font-base-color) !important;
+}
+
+.contact-box .btn:hover {
+    font-weight: 700;
+}
+
+.review-summary {
+    margin-top: var(--rem-30px);
+    padding:  var(--rem-5px) var(--rem-10px);
+    background: #000;
+    color: #fff;
+}
+
+.review-summary > * {
+    display: inline-block;
+    font-size: var(--rem-20px);
+    font-weight: 500;
+    color: var(--point-color);
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.review-summary .star-box {
+    color: #ffbf00;
 }

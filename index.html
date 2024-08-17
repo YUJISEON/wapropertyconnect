@@ -19,6 +19,7 @@
     <!-- Font Awesome -->    
     <script src="https://kit.fontawesome.com/326da5bcc4.js" crossorigin="anonymous"></script>
     <!-- common -->    
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH9xcTZm3MNJ9cPrPzFaZCRwJuHwpq34U&libraries=places&language=en"></script>
     <script defer src="./js/common.js"></script>
 </head>
 <body>
@@ -43,7 +44,6 @@
             </div>    
         </div>
     </header>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH9xcTZm3MNJ9cPrPzFaZCRwJuHwpq34U&libraries=places&language=en"></script>
     <script defer src="./js/main.js"></script>
     <main id="mainPage">
         <section class="main-visual">
@@ -233,7 +233,7 @@
                     </div> -->
                     <div class="con-wrap">
                         <div class="swiper reviewSwiper">
-                            <div id="riview" class="swiper-wrapper">
+                            <div id="review" class="swiper-wrapper">
                                 <!-- <div class="swiper-slide">
                                     <div class="review-box">
                                         <div class="text">${review.text}</div>
@@ -315,19 +315,6 @@
         <section class="main-section main-section-07">
             <div class="map-box">
                 <div id="map"></div>
-                <div style="display: none">
-                    <input
-                        id="pac-input"
-                        class="controls"
-                        type="text"
-                        placeholder="Enter a location"
-                    />
-                </div>
-                <div id="infowindow-content">
-                    <span id="place-name" class="title"></span><br />
-                    <strong>Place ID:</strong> <span id="place-id"></span><br />
-                    <span id="place-address"></span>
-                </div>
             </div>          
         </section>
         <section class="main-section main-section-08 bg-color-point">

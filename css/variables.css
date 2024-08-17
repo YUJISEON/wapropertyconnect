@@ -43,9 +43,9 @@
     --main-mobile-visual-height: 100svh;
 
     /*sub visual*/
-    --sub-pc-visual-height: 270px;     
-    --sub-tablet-visual-height: 270px;
-    --sub-mobile-visual-height: 150px;
+    --sub-pc-visual-height: 80svh;     
+    --sub-tablet-visual-height: 80svh;
+    --sub-mobile-visual-height: 80svh;
 
     /*header*/
     --header-bg-color: #fff;  

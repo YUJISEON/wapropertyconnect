@@ -18,6 +18,7 @@
     <!-- Font Awesome -->    
     <script src="https://kit.fontawesome.com/326da5bcc4.js" crossorigin="anonymous"></script>
     <!-- common -->    
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH9xcTZm3MNJ9cPrPzFaZCRwJuHwpq34U&libraries=places&language=en"></script>
     <script defer src="../js/common.js"></script>
 </head>
 <body>
@@ -43,16 +44,20 @@
         </div>
     </header>
     <main id="subPage" class="agents">
-        <section class="sub-section-01 bg-img">
+        <section class="sub-visual">
+            <div class="parallax-area">
+                <div class="parallax-bg"></div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-01">
             <div class="body">
                 <div class="inner">
-                    <div class="con-wrap wid100 max700 txt-c">
-                        <div class="con-txt serif">
-                            <h1 class="txt-white">Local agent finder</h1>
-                            <p class="txt-white">Compare Top Real Estate Agents In Your Area</p>
-                            <span>Enter the postcode for yout agent search</span>
-                        </div>
-                        <div class="search-area row justify-content-between align-items-center">
+                    <div class="con-tit">
+                        <h2>​To find the best agents in your suburb</h2>
+                        <span>​We analyse every property sale in Perth to help you find the top agents in your area</span>
+                    </div>
+                    <div class="con-wrap txt-c">                        
+                        <div class="search-area m0-auto max700 row justify-content-between align-items-center">
                             <div class="input-box">
                                 <figure class="p-absolute y-center">
                                     <i class="far fa-comment-dots"></i>
@@ -62,11 +67,325 @@
                             </div>                            
                             <button id="searchBtn" class="btn btn-search">COMPARE NOW</button>
                         </div>
+                        <p class="con-txt mt-50 serif pb-0">
+                            WA Property Connect uses millions of data points to identify top-rated real estate professionals in Perth with in-depth <br>
+                            knowledge of your area. We connect you with agents who are experts in recent sales within your neighborhood,  <br>
+                            ensuring a superior transaction experience. Our selection process identifies agents with experience selling properties similar to yours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-03 bg-color-white">
+            <div class="body">
+                <div class="inner">
+                    <div class="con-tit">
+                        <h2>​WA PROPERTY CONNECT</h2>
+                        <span>We’re not just another agent directory</span>
+                    </div>
+                    <div class="con-wrap">
+                        <p class="con-txt">
+                            WA Property Connect is not just another agent directory. <br>
+                            We analyze every property sale in Perth and provide you with valuable information and the right real estate agent.
+                        </p>
+                        <div class="box-wrap full full-gray">
+                            <ul class="box-list item-3 row justify-content-center">
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h5>We are #1 in Perth <br>for the best service</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h5>Time-Saving <br>Easy system</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h5>Provide Personalized<br>Information</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="valuation-box box-wrap">
+                            <ul class="valuation-list box-list item-4 row justify-content-center">
+                                <li>
+                                    <div class="box-inner padding">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>We are #1 in Perth <br>for the best service</h4>
+                                        <p>As a leading real estate information group in Perth, we assist over 18,000 Australians annually by providing valuable information for selling homes, finding agents, and conducting research, consistently receiving high satisfaction ratings.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner padding">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Time-Saving <br>Easy system</h4>
+                                        <p>With our user-friendly platform, you can quickly find and compare agents in your area without any hassle. Searching and requesting results for a suburb takes only 2 minutes, allowing you to secure the best price without stress. Experience it now</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner padding">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Provide Personalized<br>Information</h4>
+                                        <p>As soon as you inquire, we match you with agents who meet your specific needs and preferences. Connect with top-rated agents known for their success and professionalism, or review detailed profiles, reviews, and ratings to find the best agent for you</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner padding">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>100% free,<br>no commitment</h4>
+                                        <p>We are a Perth-based real estate connection service group, offering all services, including phone consultations, free of charge. Take advantage of our expert services with no obligations and experience the best in real estate transactions.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="txt-add txt-c mt-20">
+                            Whether it’s recommending additional agents or advising on how to negotiate <br>
+                            commissions, we’ll be with you every step of the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-01">
+            <div class="body small">
+                <div class="inner">
+                    <div class="con-tit">
+                        <h2>Local agent finder</h2>
+                    </div>
+                    <div class="con-wrap txt-c">                        
+                        <div class="agent-box box-wrap">
+                            <ul class="agent-list box-list gap-40 item-5 row justify-content-center">
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <img src="../img/sub/img_sub_findagents_agent_01.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <img src="../img/sub/img_sub_findagents_agent_02.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <img src="../img/sub/img_sub_findagents_agent_03.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <img src="../img/sub/img_sub_findagents_agent_04.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure class="img-round">
+                                            <img src="../img/sub/img_sub_findagents_agent_05.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="box-txt mt-50">
+                                WA Property Connect uses millions of data points to identify top-rated real estate professionals in Perth
+                                with in-depth knowledge of your area. We connect you with agents who are experts 
+                                in recent sales within your neighborhood, ensuring a superior transaction experience. 
+                                Our selection process identifies agents with experience selling properties similar to yours.
+                            </div>
+                        </div>
+                        <div class="what-box box-wrap top-line white-box">
+                            <h3>What a realtor does</h3>
+                            <ul class="what-list box-list item-4 row justify-content-center">
+                                <li>
+                                    <div class="box-inner">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Trusted Agents</h4>
+                                        <p>Connect with top-rated real estate agents who have a proven track record of success and professionalism.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Time-Saving</h4>
+                                        <p>Our user-friendly platform allows you to quickly find and compare agents in your area without the hassle.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Informed</h4>
+                                        <p>Access detailed profiles, reviews, and ratings of agents to choose the best fit for your need</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box-inner">
+                                        <figure>
+                                            <i class="far fa-file-alt"></i>
+                                        </figure>
+                                        <h4>Personalized </h4>
+                                        <p>Get matched with agents tailored to your specific requirements and preferences using data-driven algorithms.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="box-txt mt-50 txt-l">
+                                <ul>
+                                    <li>
+                                        <strong>• Assisting Clients with Buying and Selling Property :</strong>
+                                        Realtors help clients buy, sell, and rent properties, including residential, commercial, and industrial real estate.
+                                    </li>
+                                    <li>
+                                        <strong>• Conducting Market Analysis:</strong>                                
+                                        They conduct market research and analysis to determine property values, compare prices, and help clients make informed decisions.
+                                    </li>
+                                    <li>
+                                        <strong>• Negotiating Deals:</strong>                                    
+                                        Realtors negotiate the terms of purchase or sale, including price, conditions, and contingencies, to ensure favorable outcomes for their clients.
+                                    </li>
+                                    <li>
+                                        <strong>• Marketing Properties:</strong>                                    
+                                        They create and implement marketing strategies to attract potential buyers or tenants, including listing properties on multiple platforms, hosting open houses, and creating promotional materials.
+                                    </li>
+                                    <li>
+                                        <strong>• Handling Paperwork and Legal Documentation:</strong>                                    
+                                        Realtors prepare and review legal documents such as contracts, deeds, and lease agreements, ensuring compliance with local and state laws.
+                                    </li>
+                                    <li>
+                                        <strong>• Providing Expert Advice:</strong>                                    
+                                        They offer advice on market conditions, property values, and potential investment opportunities, helping clients make informed decisions.
+                                    </li>
+                                    <li>
+                                        <strong>• Coordinating Property Inspections and Appraisals:</strong>                                    
+                                        Realtors coordinate inspections, appraisals, and repairs needed before closing a sale, ensuring all aspects of the transaction are completed smoothly.
+                                    </li>
+                                    <li>
+                                        <strong>• Facilitating Communication:</strong>                                    
+                                        They act as intermediaries between buyers, sellers, and other parties involved in the transaction, such as lenders, inspectors, and attorneys.
+                                    </li>
+                                    <li>
+                                        <strong>• Assisting with Closing Processes: </strong>                                   
+                                        Realtors guide clients through the closing process, ensuring that all paperwork is completed, funds are transferred, and the transaction is legally finalized.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-02 bg-color-white">
+            <div class="body small">
+                <div class="inner">
+                    <div class="con-wrap">                        
+                        <div class="video-box">
+                            <video controls preload="none" autoplay="" playsinline="true" src="../video/video_findagents.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-03">
+            <div class="body small">
+                <div class="inner">
+                    <div class="con-tit">
+                        <h2>FREE CONSULTING <br>WITH APPRAISAL</h2>
+                    </div>
+                    <div class="con-wrap top-line txt-c">                        
+                        <div class="con-txt">
+                            You can receive a free real estate report, including the latest property <br>
+                            appraisal, recent sales data in your neighborhood,  and performance data <br>
+                            for surrounding suburbs, long with a consultation with an expert.
+                        </div>
+                        <div id="contactBox" class="contact-box max600 m0-auto toggle-box">
+                            <form id="contactForm" class="row row-wrap justify-content-between gap-10">
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputName" name="inputName" placeholder="Full Name" />
+                                </p>
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputPhone" name="inputPhone" placeholder="Phone Number" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <input type="text" id="inputEmail" name="inputEmail" placeholder="E-mail" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <input type="text" id="inputTit" name="inputTit" placeholder="Title" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <textarea name="inputCon" id="inputCon"></textarea>
+                                </p>
+                                <p class="btn-box col-12">
+                                    <button type="submit" class="btn btn-submit">SEND</button>
+                                </p>
+                            </form>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-04 bg-color-white">
+            <div class="body">
+                <div class="inner">
+                    <div class="con-wrap">                        
+                        <div class="con-wrap">
+                            <div class="swiper reviewSwiper type2">
+                                <div id="review" class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide">
+                                        <div class="review-box">
+                                            <div class="text">${review.text}</div>
+                                            <p><span class="name">${review.author_name}</span> - <span class="time">${reviewDate}</span></p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="review-summary txt-c">
+                                <div class="star-box"></div>
+                                <span class="rating-box"></span>
+                                based on 
+                                <span class="total-box"></span>
+                                reivews from verified customers.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <div class="body">
+            <div class="inner row align-items-center justify-content-center">
+                <p>COPYRIGHT © 2024 wapropertyconnect. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
     <script src="./js/agents.js"></script>
 </body>
 

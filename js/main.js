@@ -17,4 +17,16 @@ window.addEventListener('DOMContentLoaded', function(){
         ease : "none",
     });
 
+    ///////////////////////////////////////////////////
+
+    var location = { lat: -32.03991, lng: 115.88508 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: location,
+        zoom: 18
+    });
+
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
 })

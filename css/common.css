@@ -102,6 +102,7 @@ body {
 .rw-1 {-webkit-line-clamp:1;}
 .rw-2 {-webkit-line-clamp:2;}
 .rw-3 {-webkit-line-clamp:3;}
+.rw-5 {-webkit-line-clamp:5;}
 .c {-webkit-line-clamp:3;}
 
 .txt-lowercase { text-transform: lowercase;}

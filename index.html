@@ -228,9 +228,9 @@
         <section class="main-section main-section-05">
             <div class="body">
                 <div class="inner">
-                    <div class="con-tit">
+                    <!-- <div class="con-tit">
                         <h2>Review</h2>
-                    </div>
+                    </div> -->
                     <div class="con-wrap">
                         <div class="swiper reviewSwiper">
                             <div id="riview" class="swiper-wrapper">
@@ -315,6 +315,19 @@
         <section class="main-section main-section-07">
             <div class="map-box">
                 <div id="map"></div>
+                <div style="display: none">
+                    <input
+                        id="pac-input"
+                        class="controls"
+                        type="text"
+                        placeholder="Enter a location"
+                    />
+                </div>
+                <div id="infowindow-content">
+                    <span id="place-name" class="title"></span><br />
+                    <strong>Place ID:</strong> <span id="place-id"></span><br />
+                    <span id="place-address"></span>
+                </div>
             </div>          
         </section>
         <section class="main-section main-section-08 bg-color-point">

@@ -21,13 +21,14 @@ window.addEventListener('DOMContentLoaded', function(){
     ///////////////////////////////////////////////////
 
     function initReview() {
-        const placeId = 'ChIJybE15Y-lMioRBbOCaWFGAYE';
+        const placeId = 'ChIJCbj3jze9MioRtWFA_T3cqJY';
         const service = new google.maps.places.PlacesService(document.createElement('div'));
 
         service.getDetails({ placeId: placeId }, (place, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 const reviews = place.reviews;
                 const reviewContainer = document.getElementById('riview');
+                const placeUrl = `https://www.google.com/maps/place/?q=place_id:${placeId}`;
                 let reviewElement = '';
 
                 reviews.forEach(review => {                    
@@ -35,10 +36,12 @@ window.addEventListener('DOMContentLoaded', function(){
 
                     reviewElement += `
                         <div class="swiper-slide">
-                            <div class="review-box">
-                                <div class="text t-rw rw-3">${review.text}</div>
-                                <p><span class="name">${review.author_name}</span><span class="time">${reviewDate}</span></p>
-                            </div>
+                            <a href="${placeUrl}" target="_blank">
+                                <div class="review-box">
+                                    <div class="text t-rw rw-5">${review.text}</div>
+                                    <p><span class="name">${review.author_name}</span><span class="time">${reviewDate}</span></p>
+                                </div>
+                            </a>
                         </div>
                     `;
                     
@@ -49,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 const reviewSwiper = new Swiper(".reviewSwiper", {
                     slidesPerView: 4,
                     spaceBetween: 20,
-                    loop: true,
+                    //loop: true,
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,

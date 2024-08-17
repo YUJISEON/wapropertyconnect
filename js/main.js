@@ -17,6 +17,29 @@ window.addEventListener('DOMContentLoaded', function(){
         ease : "none",
     });
 
+
+    ///////////////////////////////////////////////////
+
+    // API Key와 Place ID를 정의합니다.
+    const apiKey = 'AIzaSyCZqcKMWUf1MtqkSPT1E__Fsh_r8nabwEU';
+    const placeId = 'ChIJ5xgH6zux2DsRk4_4AQxupYg'; // 예시 Place ID
+
+    // API 요청을 통해 리뷰 데이터를 가져옵니다.
+    fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        const reviews = data.result.reviews;
+        
+        // 가져온 리뷰를 화면에 출력합니다.
+        reviews.forEach(review => {
+        console.log(`Author: ${review.author_name}`);
+        console.log(`Rating: ${review.rating}`);
+        console.log(`Review: ${review.text}`);
+        console.log('------');
+        });
+    })
+    .catch(error => console.error('Error fetching reviews:', error));
+
     ///////////////////////////////////////////////////
 
     function initMap() {

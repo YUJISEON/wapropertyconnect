@@ -43,7 +43,7 @@
             </div>    
         </div>
     </header>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH9xcTZm3MNJ9cPrPzFaZCRwJuHwpq34U&libraries=places"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH9xcTZm3MNJ9cPrPzFaZCRwJuHwpq34U&libraries=places&language=en"></script>
     <script defer src="./js/main.js"></script>
     <main id="mainPage">
         <section class="main-visual">
@@ -232,8 +232,16 @@
                         <h2>Review</h2>
                     </div>
                     <div class="con-wrap">
-                        <div class="review-box">
-                            <div id="reviews"></div>
+                        <div class="swiper reviewSwiper">
+                            <div id="riview" class="swiper-wrapper">
+                                <!-- <div class="swiper-slide">
+                                    <div class="review-box">
+                                        <div class="text">${review.text}</div>
+                                        <p><span class="name">${review.author_name}</span> - <span class="time">${reviewDate}</span></p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

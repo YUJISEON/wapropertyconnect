@@ -27,20 +27,48 @@ window.addEventListener('DOMContentLoaded', function(){
         service.getDetails({ placeId: placeId }, (place, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 const reviews = place.reviews;
+                const reviewContainer = document.getElementById('riview');
+                let reviewElement = '';
 
-                const reviewContainer = document.getElementById('reviews');
-                reviews.forEach(review => {
-                    const reviewElement = document.createElement('div');
-                    reviewElement.innerHTML = `
-                        <h4>${review.author_name} - ${review.rating}★</h4>
-                        <p>${review.text}</p>
+                reviews.forEach(review => {                    
+                    const reviewDate = formatDate(review.time);
+
+                    reviewElement += `
+                        <div class="swiper-slide">
+                            <div class="review-box">
+                                <div class="text t-rw rw-3">${review.text}</div>
+                                <p><span class="name">${review.author_name}</span><span class="time">${reviewDate}</span></p>
+                            </div>
+                        </div>
                     `;
-                    reviewContainer.appendChild(reviewElement);
+                    
+                });
+
+                reviewContainer.innerHTML = reviewElement;
+
+                const reviewSwiper = new Swiper(".reviewSwiper", {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    // navigation: {
+                    //     nextEl: ".swiper-button-next",
+                    //     prevEl: ".swiper-button-prev",
+                    // },
                 });
             } else {
                 console.error('Error fetching reviews:', status);
             }
         });
+
+        function formatDate(timestamp) {
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            const date = new Date(timestamp * 1000);
+            return date.toLocaleDateString('en-GB', options);
+        }
     }
 
     initReview();

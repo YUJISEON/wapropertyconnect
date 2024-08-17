@@ -101,6 +101,7 @@ body {
 .t-rw {overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; display:-webkit-box;  -webkit-box-orient:vertical; -moz-box-orient:vertical; word-break:break-all; word-wrap:break-word;}
 .rw-1 {-webkit-line-clamp:1;}
 .rw-2 {-webkit-line-clamp:2;}
+.rw-3 {-webkit-line-clamp:3;}
 .c {-webkit-line-clamp:3;}
 
 .txt-lowercase { text-transform: lowercase;}

@@ -136,6 +136,41 @@
 }
 
 /* ==================================================
+    .main-section-05
+================================================== */
+
+.reviewSwiper {
+    padding: 0 0 80px !important;
+}
+
+.review-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: var(--rem-20px) var(--rem-30px);
+    font-size: var(--rem-18px);
+}
+
+.review-box .text {
+
+}
+
+.review-box p {
+    margin-top: 20px;
+}
+
+.review-box p > * {
+    display: block;
+}
+
+.review-box .name {
+    font-weight: 700;
+}
+
+.review-box .date {
+    
+}
+
+/* ==================================================
     .main-section-06
 ================================================== */
 

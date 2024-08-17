@@ -1,5 +1,9 @@
 
 
+#subPage {
+    padding-top: var(--header-pc-height);
+}
+
 #subPage.agents .sub-section-01 {
     background: url(../img/main/img_main_sec02_01.jpg) no-repeat center / cover;
 }
@@ -18,7 +22,7 @@
 ================================================== */
 
 .con-wrap {
-   /* margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .con-txt {

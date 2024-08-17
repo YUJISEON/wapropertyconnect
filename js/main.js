@@ -43,4 +43,31 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
     initMap();
+
+    ///////////////////////////////////////////////////
+
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent reload
+    
+        var formData = new FormData(this);
+        formData.append('service_id', 'service_ez7fo8u');
+        formData.append('template_id', 'template_v0a1gia');
+        formData.append('user_id', 'Uwlpc8XZC0VSGFsVJ');
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.emailjs.com/api/v1.0/email/send-form', true);
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                alert('Your mail is sent!');
+            } else {
+                alert('Oops... ' + xhr.responseText);
+            }
+        };
+        xhr.onerror = function() {
+            alert('Oops... Something went wrong.');
+        };
+        xhr.send(formData);
+    });
 })

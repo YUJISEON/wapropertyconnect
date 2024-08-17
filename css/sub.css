@@ -133,12 +133,13 @@
 	finder
 ================================================== */
 
-#subPage.finder section,
+#subPage.finder .sub-section,
 #subPage.finder .sub-section-02 .toggle-box {
     display: none;
 }
 
-#subPage.finder section.active,
+
+#subPage.finder .sub-section.active,
 #subPage.finder .sub-section-02 .toggle-box.active {
     display: block;
 }

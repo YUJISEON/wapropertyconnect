@@ -295,6 +295,10 @@ select {
     background: rgb(193, 211, 228);
 }
 
+.bg-color-point {
+    background: var(--base-color);
+}
+
 .con-tit  {
     text-align: center;
 }
@@ -355,105 +359,6 @@ select {
 
 .con-wrap .btn-basic:hover {
     background: var(--base-color-hover);
-}
-
-
-.box-list {
-    gap : 10px
-}
-
-.box-list.item-3 li {    
-    -ms-flex: 0 0 33.333%;
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-}
-
-.box-list.item-4 li {    
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-
-.box-list .box-inner {
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.box-list .box-inner.padding {
-    padding: var(--rem-20px) var(--rem-20px) var(--rem-100px);
-}
-
-.box-list li figure {
-    text-align: center;
-    font-size: var(--rem-40px);
-}
-
-.box-list li figure.img-box {
-    width: 100%;
-    aspect-ratio: 1.5 / 1;
-}
-
-.box-list li figure.img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.box-list li h4 {    
-    margin-top: 10px;
-    font-size: var(--rem-20px);
-    font-weight: 700;
-    line-height: 1.3636;
-}
-
-.box-list li p {
-    margin-top: 10px;
-    font-size: var(--rem-16px);
-    line-height: 1.3636;
-}
-
-.box-list li span {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    font-size: var(--rem-35px);
-    font-weight: 700;
-    color: var(--point-color);
-}
-
-.box-list.hover-color li {
-    cursor: pointer;
-}
-
-.box-list.hover-color li:hover h3,
-.box-list.hover-color li:hover h4,
-.box-list.hover-color li:hover p,
-.box-list.hover-color li:hover span {
-    color: var(--point-color);
-}
-
-.box-list li .bg-color-white {
-    padding: var(--rem-20px) var(--rem-20px) var(--rem-80px);
-} 
-
-
-.bg-color-white .box-list li {
-    background: rgb(193, 211, 228);
-    text-align: center;
-}
-
-.bg-color-white .box-list li p {
-    color: #fff;
-}
-
-.box-list.summary-list {
-    max-width: 940px;
-    margin: 0 auto;
-}
-
-.box-wrap + .con-txt {
-    margin-top: var(--rem-50px);
-    padding-bottom: 0;
 }
 
 /* ==================================================

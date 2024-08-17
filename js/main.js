@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var location = { lat: -32.0405267, lng: 115.8850593 };
         
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 18,
+            zoom: 16,
             center: location
         });
         

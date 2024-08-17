@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
     } else {
 
-        const contactForm = document.getElementById('contactForm');
+        const findForm = document.getElementById('findForm');
         const progress = document.getElementById('progress');
         const step1 = document.getElementById('step1');
         const step2_01 = document.getElementById('step2-01');
@@ -227,7 +227,7 @@ window.addEventListener("DOMContentLoaded", function(){
             });
         }
     
-        contactForm.addEventListener('submit', function(event) {
+        findForm.addEventListener('submit', function(event) {
             event.preventDefault(); // prevent reload
         
             var formData = new FormData(this);

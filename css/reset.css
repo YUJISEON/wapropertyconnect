@@ -64,6 +64,7 @@ blockquote:before, blockquote:after,q:before, q:after {
 }
 input, textarea {
  padding:0 5px;
+ box-sizing: border-box;
 }
 input:-webkit-autofill {
    -webkit-box-shadow: 0 0 0 1000px white inset; /* 크롭입력배경색제거 */

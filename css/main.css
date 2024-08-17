@@ -126,7 +126,7 @@
 }
 
 .box-list.summary-list {
-    max-width: 940px;
+    max-width: var(--inner-max-width-small);
     margin: 0 auto;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .why-box {
-    max-width: 940px;
+    max-width: var(--inner-max-width-small);
     margin: 0 auto;
     font-family: var(--font-family-serif);
 }
@@ -234,4 +234,25 @@
 
 .gm-style-iw-chr {
     display: none !important;
+}
+
+/* ==================================================
+    .main-section-08
+================================================== */
+
+
+.contact-box .input-box input,
+.contact-box .input-box textarea  {
+    width: 100%;
+    resize: none;
+}
+
+.contact-box .btn {
+    margin-top: 0;
+    background: var(--bg-base-color);
+    color: var(--font-base-color) !important;
+}
+
+.contact-box .btn:hover {
+    font-weight: 700;
 }

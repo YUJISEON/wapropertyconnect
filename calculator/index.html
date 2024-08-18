@@ -52,12 +52,13 @@
         <section class="sub-section sub-section-01 bg-img">
             <div class="body">
                 <div class="inner">
-                    <div class="con-wrap">
-                        <div class="con-txt serif">
-                            <h1>Commission Calculator</h1>
-                            <p>Pay the right commission and maximise your sale price</p>
-                        </div>
-                        <div class="calculator-area row justify-content-between">
+                    <div class="con-tit serif">
+                        <span>Pay the right commission and maximise your sale price</span>
+                        <h1>Commission Calculator</h1>
+                        <p>PUT IN YOUR HOUSE VALUE AND CALCULATE OF YOUR HOUSE COMMISION</p>                        
+                    </div>
+                    <div class="con-wrap">                        
+                        <div class="calculator-area row gap-30 justify-content-between">
                             <div class="col-6">
                                 <div class="calculator-box">
                                     <ul class="tab">
@@ -104,11 +105,60 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="con-txt mt-50 txt-l">
+                            Commission is the fee you pay to your real estate agent when they sell your property. As it tends to be the largest single cost in selling your home, it's important to understand how commissions work.
+                            <br><br>
+                            Real estate commission rates aren't regulated and are set by individual agents, which means they can vary from suburb to suburb as well as between agents within a suburb. While the difference between 2.0% and 2.5% may not seem like a lot, this can actually mean thousands of dollars difference in what you pay your real estate agent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section bg-color-point">
+            <div class="body small">
+                <div class="inner">
+                    <div class="con-tit serif">
+                        <h3>CONTACT US</h3>
+                    </div>
+                    <div class="con-wrap txt-c">
+                        <div class="con-txt">
+                            If you have any questions <br>
+                            please fill in the details below and press the submit button.
+                        </div>
+                        <div id="contactBox" class="contact-box max600 m0-auto toggle-box">
+                            <form id="contactForm" class="row row-wrap justify-content-between gap-10">
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputName" name="inputName" placeholder="Full Name" />
+                                </p>
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputPhone" name="inputPhone" placeholder="Phone Number" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <input type="text" id="inputEmail" name="inputEmail" placeholder="E-mail" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <input type="text" id="inputTit" name="inputTit" placeholder="Title" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <textarea name="inputCon" id="inputCon"></textarea>
+                                </p>
+                                <p class="btn-box col-12">
+                                    <button type="submit" class="btn btn-submit">SEND</button>
+                                </p>
+                            </form>         
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <div class="body">
+            <div class="inner row align-items-center justify-content-center">
+                <p>COPYRIGHT © 2024 wapropertyconnect. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
     <script src="./js/calculator.js"></script>
 </body>
 

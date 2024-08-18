@@ -243,6 +243,7 @@ window.addEventListener("DOMContentLoaded", function(){
             xhr.onload = function() {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     alert('Your mail is sent!');
+                    location.replace('/wapropertyconnect/agents/index.html');
                 } else {
                     alert('Oops... ' + xhr.responseText);
                 }

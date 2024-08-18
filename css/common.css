@@ -186,8 +186,8 @@ body {
 
 
 /***** radio_box *****/
-.radio-box{ position:relative;}
-.radio-box > input[type="radio"]{width:1px; height:1px; margin:-1px; position:absolute; clip: rect(0, 0, 0, 0); overflow:hidden;}
+.radio-box{ position:relative;line-height: 1;}
+.radio-box > input[type="radio"]{width:1px; height:1px; margin:-1px; position:absolute; clip: rect(0, 0, 0, 0); overflow:hidden; line-height: 1;}
 .radio-box > input[type="radio"] ~ label{padding-left:26px; box-sizing:border-box; position:relative; font-size:var(--rem-16px); font-weight:400; color:var(--font-base-color); cursor:pointer;}
 .radio-box > input[type="radio"]:checked ~ label{color:var(--point-color);}
 .radio-box > input[type="radio"] ~ label:before{display:block; content:''; clear:both; width:20px; height:20px; border-radius:10px; border:1px solid rgb(141 169 168 / 80%); padding:4px; box-sizing:border-box; background-color:#fff; position:absolute; top:50%; margin-top:-10px; left:0; z-index:0;}
@@ -199,8 +199,8 @@ body {
 
 
 /***** check_box *****/
-.check-box{ position:relative;}
-.check-box > input[type="checkbox"]{width:1px; height:1px; margin:-1px; position:absolute; clip: rect(0, 0, 0, 0); overflow:hidden;}
+.check-box{ position:relative;line-height: 1;}
+.check-box > input[type="checkbox"]{width:1px; height:1px; margin:-1px; position:absolute; clip: rect(0, 0, 0, 0); overflow:hidden; line-height: 1;}
 .check-box > input[type="checkbox"] ~ label{padding-left:26px; box-sizing:border-box; position:relative; font-size:var(--rem-16px); font-weight:400; color:var(--font-base-color); cursor:pointer;}
 .check-box > input[type="checkbox"]:checked ~ label{color:var(--point-color);}
 .check-box > input[type="checkbox"] ~ label:before{display:block; content:''; clear:both; width:20px; height:20px; border-radius:3px; border:1px solid rgb(141 169 168 / 80%); box-sizing:border-box; background-color:#fff; position:absolute; top:50%; margin-top:-10px; left:0; z-index:0;}

@@ -304,9 +304,63 @@
         <section class="sub-section sub-section-02 bg-color-white">
             <div class="body small">
                 <div class="inner">
+                    <div class="con-tit">
+                        <span>Compare Top Real Estate Agents In Your Area</span>
+                        <h2>To find the best agents in your suburb</h2>
+                    </div>
                     <div class="con-wrap">                        
-                        <div class="video-box">
-                            <video controls preload="none" autoplay="" playsinline="true" src="../video/video_findagents.mp4"></video>
+                        <p class="con-txt">
+                            Type in your suburb and property details, then compare the top agents in your area.
+                        </p>
+                        <div id="realtorBox" class="contact-box max600 m0-auto toggle-box">
+                            <form id="realtorForm" class="row row-wrap justify-content-between gap-10">
+                                <div class="check-wrap clearFix col-12">
+                                    <span>중요도체크 해주세요</span>
+                                    <div class="check-items">
+                                        <p class="check-box">
+                                            <input type="checkbox" name="importance[]" id="importance1" value="가까운 지역">
+                                            <label for="importance1">가까운 지역</label>
+                                        </p>
+                                        <p class="check-box">
+                                            <input type="checkbox" name="importance[]" id="importance2" value="저렴한 커미션">
+                                            <label for="importance2">저렴한 커미션</label>
+                                        </p>
+                                        <p class="check-box">
+                                            <input type="checkbox" name="importance[]" id="importance3" value="친절한">
+                                            <label for="importance3">친절한</label>
+                                        </p>
+                                        <p class="check-box">
+                                            <input type="checkbox" name="importance[]" id="importance4" value="프로페셔널">
+                                            <label for="importance4">프로페셔널</label>
+                                        </p>
+                                    </div>
+                                </div>    
+                                <div class="radio-wrap col-12">
+                                    <span>향후 유사한 이벤트에 참가할 의향이 있으신가요?</span>
+                                    <div class="radio-items">
+                                        <p class="radio-box">
+                                            <input type="radio" name="eventagree[]" id="eventagree1" value="네">
+                                            <label for="eventagree1">네</label>
+                                        </p>
+                                        <p class="radio-box">
+                                            <input type="radio" name="eventagree[]" id="eventagree2" value="아니오">
+                                            <label for="eventagree2">아니오</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputName" name="inputName" placeholder="Full Name" />
+                                </p>
+                                <p class="input-box col-6">
+                                    <input type="text" id="inputPhone" name="inputPhone" placeholder="Phone Number" />
+                                </p>
+                                <p class="input-box col-12">
+                                    <input type="text" id="inputEmail" name="inputEmail" placeholder="E-mail" />
+                                </p>
+                                <p class="btn-box col-12">
+                                    <button type="submit" class="btn btn-submit">SEND</button>
+                                </p>
+                            </form>         
                         </div>
                     </div>
                 </div>
@@ -315,10 +369,49 @@
         <section class="sub-section sub-section-03">
             <div class="body small">
                 <div class="inner">
-                    <div class="con-tit">
-                        <h2>FREE CONSULTING <br>WITH APPRAISAL</h2>
+                    <div class="con-wrap">                        
+                        <div class="video-box">
+                            <video controls preload="none" autoplay="" playsinline="true" src="../video/video_findagents.mp4"></video>
+                        </div>
                     </div>
-                    <div class="con-wrap top-line txt-c">                        
+                </div>
+            </div>
+        </section>
+        <section class="sub-section sub-section-03  bg-color-white">
+            <div class="body">
+                <div class="inner">
+                    <div class="con-wrap">                        
+                        <div class="con-wrap">
+                            <div class="swiper reviewSwiper type2">
+                                <div id="review" class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide">
+                                        <div class="review-box">
+                                            <div class="text">${review.text}</div>
+                                            <p><span class="name">${review.author_name}</span> - <span class="time">${reviewDate}</span></p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="review-summary txt-c">
+                                <div class="star-box"></div>
+                                <span class="rating-box"></span>
+                                based on 
+                                <span class="total-box"></span>
+                                reivews from verified customers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-section bg-color-point">
+            <div class="body small">
+                <div class="inner">
+                    <div class="con-tit serif">
+                        <h3>FREE CONSULTING <br>WITH APPRAISAL</h3>
+                    </div>
+                    <div class="con-wrap top-line txt-c">
                         <div class="con-txt">
                             You can receive a free real estate report, including the latest property <br>
                             appraisal, recent sales data in your neighborhood,  and performance data <br>
@@ -345,34 +438,6 @@
                                     <button type="submit" class="btn btn-submit">SEND</button>
                                 </p>
                             </form>         
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="sub-section sub-section-04 bg-color-white">
-            <div class="body">
-                <div class="inner">
-                    <div class="con-wrap">                        
-                        <div class="con-wrap">
-                            <div class="swiper reviewSwiper type2">
-                                <div id="review" class="swiper-wrapper">
-                                    <!-- <div class="swiper-slide">
-                                        <div class="review-box">
-                                            <div class="text">${review.text}</div>
-                                            <p><span class="name">${review.author_name}</span> - <span class="time">${reviewDate}</span></p>
-                                        </div>
-                                    </div> -->
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            <div class="review-summary txt-c">
-                                <div class="star-box"></div>
-                                <span class="rating-box"></span>
-                                based on 
-                                <span class="total-box"></span>
-                                reivews from verified customers.
-                            </div>
                         </div>
                     </div>
                 </div>

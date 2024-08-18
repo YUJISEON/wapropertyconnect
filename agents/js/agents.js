@@ -255,5 +255,47 @@ window.addEventListener("DOMContentLoaded", function(){
     }
 
 
+    ///////////////////////////////////////////////////////////
+
+    const realtorForm = document.getElementById('realtorForm');
+
+    if(realtorForm) {
+        realtorForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // prevent reload
+        
+            var formData = new FormData(this);
+            // 체크박스 값 수집
+            const importanceCheckboxes = this.querySelectorAll('input[name="importance[]"]:checked');
+            let importanceValues = [];
+            importanceCheckboxes.forEach((checkbox) => {
+                importanceValues.push(checkbox.value);
+            });
+            formData.append('importance', importanceValues.join(', ')); // 배열을 문자열로 변환하여 추가
+
+            // 라디오 버튼 값 수집
+            const eventagreeRadio = this.querySelector('input[name="eventagree[]"]:checked');
+            if (eventagreeRadio) {
+                formData.append('eventagree', eventagreeRadio.value);
+            }
+
+            formData.append('service_id', 'service_berj6c8');
+            formData.append('template_id', 'template_v42hb05');
+            formData.append('user_id', 'nmWuFqNcSu-nC5H9Z');
+        
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://api.emailjs.com/api/v1.0/email/send-form', true);
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    alert('Your mail is sent!');
+                } else {
+                    alert('Oops... ' + xhr.responseText);
+                }
+            };
+            xhr.onerror = function() {
+                alert('Oops... Something went wrong.');
+            };
+            xhr.send(formData);
+        });
+    }
     
 });

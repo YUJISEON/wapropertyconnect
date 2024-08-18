@@ -61,27 +61,47 @@
                         <div class="calculator-area row gap-30 justify-content-between">
                             <div class="col-6">
                                 <div class="calculator-box">
-                                    <ul class="tab">
-                                        <li><a href="javascript:;">Fixed Commission</a></li>
-                                        <li><a href="javascript:;">Tiered Commission</a></li>
+                                    <ul class="way-toggle row">
+                                        <li class="on" data-type="fixed"><a href="javascript:;">Fixed Commission</a></li>
+                                        <li data-type="tiered"><a href="javascript:;">Tiered Commission</a></li>
                                     </ul>
-                                    <ul class="cal">
-                                        <li>
-                                            <div class="cal-inner">
-                                                <strong>Perth, WA</strong>
-                                                <h4>Target sale price: $ <b class="basic-price">0</b></h4>
-                                                <div id="rangeSliderWrap" class="range-slider-wrap">
-                                                    <div id="rangeSlider" class="range-slider">
-                                                        <span id="handle" class="handle"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="commission">
-                                                    <p>1.74% is the average commission rate in Perth</p>
-                                                    <p><input type="number" name="comm" id="comm" value="1.74" step="0.01">%</p>
+                                    <div class="cal-area">
+                                        <div class="target-box">
+                                            <strong>Perth, WA</strong>
+                                            <h4>Target sale price: $ <b class="basic-price">800,000</b></h4>
+                                            <div id="rangeSliderWrap" class="range-slider-wrap">
+                                                <div id="rangeSlider" class="range-slider">
+                                                    <span id="handle" class="handle"></span>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                        <div class="commission-box">
+                                            <ul class="commi-toggle">
+                                                <li class="on" data-type="fixed">
+                                                    <div class="commi-inner">
+                                                        <p>1.74% is the average commission rate in Perth</p>
+                                                        <p><input type="number" name="comm1" id="comm1" value="1.74" step="0.01">%</p>
+                                                    </div>
+                                                </li>
+                                                <li data-type="tiered">
+                                                    <div class="commi-inner">
+                                                        <p>Tier 1 commission rate*</p>
+                                                        <p><input type="number" name="comm2" id="comm2" value="1.74" step="0.01">% <span>* SALE UNDER $<em>800,000</em></span></p>
+                                                        <p>Tier 2 commission rate</p>
+                                                        <p><input type="number" name="comm3" id="comm3" value="1.74" step="0.01">% <span>* SALE ABOVE $<em>800,000</em></span></p>
+                                                        <div class="final">
+                                                            <h4>Final sale price: $ <b class="final-price">0</b></h4>
+                                                            <div id="rangeSliderWrap2" class="range-slider-wrap">
+                                                                <div id="rangeSlider2" class="range-slider">
+                                                                    <span id="handle2" class="handle handle2"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-6">

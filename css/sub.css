@@ -377,13 +377,86 @@
 	calculator
 ================================================== */
 
+.calculator-box {
+    width: 100%;
+    height: 100%;
+    background: var(--base-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.calculator-box .way-toggle li {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.calculator-box .way-toggle li.on {
+    color: var(--point-color);
+}
+
+.calculator-box .way-toggle li.on::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-top: 5px solid var(--point-color);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.calculator-box .cal-area {
+    padding: var(--rem-30px) var(--rem-20px);    
+}
+
+.calculator-box .cal-area .target-box {
+    padding: 0 var(--rem-20px) var(--rem-30px);   
+}
+
+.calculator-box .cal-area .target-box strong {
+    font-size: var(--rem-18px);
+}   
+
+.calculator-box .cal-area  h4 {
+    font-size: var(--rem-16px);
+    font-weight: 300;
+}
+
+.calculator-box .cal-area h4 b {
+    font-weight: 700;
+}
+
+.calculator-box .cal-area .commission-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    padding: var(--rem-20px) var(--rem-20px) 0;   
+}
+
+.calculator-box .cal-area .commission-box {
+    font-size: var(--rem-16px);
+}
+
+.calculator-box .cal-area .commission-box p + p {
+    margin-top: 10px;
+}
+
+.calculator-box .cal-area .commission-box  input {
+    width: 100px;
+    margin-right: 5px;
+}
+.calculator-box .cal-area .commission-box .final {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    padding-top: var(--rem-20px);
+    margin-top: var(--rem-20px);
+}
 
 .range-slider-wrap {
     position: relative;
     width: 100%;
     height: .5rem;
     margin-top: 2.25rem;
-    border-radius: .375rem;
+    border-radius: 5px;
     background: #fff;
 }
 
@@ -395,11 +468,11 @@
     top: 50%;
     transform: translateY(-50%);  
     -webkit-transform: translateY(-50%);  
-    -o-transform: translateY(-50%);  
+    -o-transform: translateY(-50%);   
     -ms-transform: translateY(-50%);  
-    -moz-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);  
     z-index: 1;
-    background: var(--base-color);
+    background: var(--point-color);
 }
 
 .range-slider-wrap .range-slider .handle {

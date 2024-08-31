@@ -1012,11 +1012,11 @@ textarea {
     bottom: 0;
 }
 
-.big .desc-box .desc {
+.board-wrap .big .desc-box .desc {
     min-height: var(--rem-50px);
 }
 
-.small ul {
+.board-wrap .small ul {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -1027,22 +1027,23 @@ textarea {
     gap : var(--rem-20px)
 }
 
-.small ul  li {
+.board-wrap .small ul  li {
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
 }
 
-.small ul  li .col-inner {
+.board-wrap .small ul  li .col-inner {
     height: 100%;
 }
-.small .col-inner .thumbnail {
+
+.board-wrap .small .col-inner .thumbnail {
     width: 200px;
     height: 100%;
     object-fit: cover;
 }
 
-.small .col-inner .desc-box {
+.board-wrap .small .col-inner .desc-box {
     width: calc(100% - 200px - 20px);
     margin-left: 20px;
 }

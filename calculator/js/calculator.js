@@ -69,13 +69,13 @@ window.addEventListener("DOMContentLoaded", function(){
         inputCommi3.innerText = comm3.value;
         finalPrice.innerText = basic2.innerText = formatNumberWithCommas(Math.round(targetSaleRange2));
 
-        aboveSale = targetSaleRange2 - targetSaleRange < 0 ? 0 : targetSaleRange2 - targetSaleRange ;
-        above.innerText = aboveSale < 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
+        aboveSale = targetSaleRange2 - targetSaleRange <= 0 ? 0 : targetSaleRange2 - targetSaleRange ;
+        above.innerText = aboveSale <= 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
 
         result2.innerText = formatNumberWithCommas(Math.round(commValue2 * targetSaleRange));        
         result3.innerText = formatNumberWithCommas(Math.round(commValue3 * aboveSale));
         commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * targetSaleRange) + (commValue3 * aboveSale)));
-        resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * targetSaleRange) + + (commValue3 * aboveSale))));
+        resultPrice.innerText = aboveSale <= 0 ? formatNumberWithCommas(Math.round(targetSaleRange - (commValue2 * targetSaleRange))) : formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * targetSaleRange) + (commValue3 * aboveSale))));
     }
 
     function formatNumberWithCommas(number) {
@@ -99,8 +99,8 @@ window.addEventListener("DOMContentLoaded", function(){
             }
         }
 
-        aboveSale = targetSaleRange2 - targetSaleRange < 0 ? 0 : targetSaleRange2 - targetSaleRange ;
-        above.innerText = aboveSale < 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
+        aboveSale = targetSaleRange2 - targetSaleRange <= 0 ? 0 : targetSaleRange2 - targetSaleRange ;
+        above.innerText = aboveSale <= 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
 
         commValue = parseFloat(comm1.value) / 100;
         commValue2 = parseFloat(comm2.value) / 100;
@@ -120,9 +120,11 @@ window.addEventListener("DOMContentLoaded", function(){
         if ( target === 'handle') { 
             commPrice.innerText = result.innerText = formatNumberWithCommas(Math.round(commValue * targetSaleRange));
             resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange - (commValue * targetSaleRange)));
-        } else {           
-            commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * (targetSaleRange2 - aboveSale)) + (commValue3 * aboveSale)));
-            resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * (targetSaleRange2 - aboveSale)) + + (commValue3 * aboveSale))));
+        } else {                      
+            if(aboveSale > 0)  {
+                commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * (targetSaleRange2 - aboveSale)) + (commValue3 * aboveSale)));
+                resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * (targetSaleRange2 - aboveSale)) + + (commValue3 * aboveSale))))
+            };
         }        
     }
 

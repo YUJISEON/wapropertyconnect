@@ -505,3 +505,22 @@
 #guideBox.on {
     display: block;
 }
+
+.p-relative .swiper-button-prev,
+.p-relative .swiper-button-next {
+    color: var(--point-color);
+}
+
+.p-relative .swiper-button-prev {
+    left: - 3.125rem !important;
+}
+
+.p-relative .swiper-button-next {
+    right: - 3.125rem;
+}
+
+#subPage.news,
+#subPage.post {
+    margin-top: var(--header-pc-height);
+}
+

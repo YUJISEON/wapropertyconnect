@@ -41,6 +41,64 @@ window.addEventListener('DOMContentLoaded', function(){
 
     ///////////////////////////////////////////////////////////
 
+    async function fetchPostcodes(query) {
+        const response = await fetch(`https://api.zippopotam.us/AU/${query}`);
+        if (response.ok) {
+            const data = await response.json();
+            return data.places.map(place => `${place['place name']} ${place['state abbreviation']} ${query}`);
+        } else {
+            return [];
+        }
+    }
+    
+    const input = document.getElementById('postcode');
+    const suggestionsList = document.getElementById('suggestions');
+    const searchBtn = document.getElementById('searchBtn');
+    
+    input.addEventListener('input', async () => {
+        const query = input.value.toLowerCase();
+        suggestionsList.innerHTML = '';
+        if (query) {
+            const postcodes = await fetchPostcodes(query);
+            postcodes.forEach(postcode => {
+                const li = document.createElement('li');
+                li.textContent = postcode;
+                li.addEventListener('click', () => {
+                    input.value = postcode;
+                    suggestionsList.innerHTML = '';
+                });
+                suggestionsList.appendChild(li);
+            });
+
+            if( postcodes.length ) {
+                suggestionsList.classList.add('on');
+            } else {
+                suggestionsList.classList.remove('on');
+            }
+        }
+    });
+
+    suggestionsList.addEventListener('click', function(e) {
+        if (e.target && e.target.nodeName === 'LI') {
+            input.value = e.target.innerText;
+            suggestionsList.innerHTML = '';
+        }
+    });
+
+    let postValue = '';
+
+    searchBtn.addEventListener('click', function(e) {
+        if (!input.value) {
+            alert('Enter your postcode..');
+            return false;
+        } 
+
+        postValue = input.value;
+        location.replace('/wapropertyconnect/agents/finder.html');
+    });
+
+    ///////////////////////////////////////////////////////////
+
     const contactForm = document.getElementById('contactForm');
 
     if(contactForm) {

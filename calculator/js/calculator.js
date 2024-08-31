@@ -29,6 +29,15 @@ window.addEventListener("DOMContentLoaded", function(){
     let result3 = document.querySelector(".result3");
     let total = document.querySelector(".total");
 
+    const wayToggle = document.querySelector('.way-toggle');
+    const commiToggle = document.querySelector('.commi-toggle');
+    const infoToggle = document.querySelector('.info-toggle');
+    const wayToggleBtns = wayToggle.querySelectorAll('li');
+    const commiToggleList = commiToggle.querySelectorAll('li');
+    const infoToggleList = infoToggle.querySelectorAll('li');
+    const tooltip = document.querySelector('.tooltip');
+    const infoWrap = document.querySelector('.info-wrap');
+
     const maxRange = 6000000;
     let targetSale = targetSaleRange = 800000, aboveSale = 50000, finalPSale = targetSaleRange2 = targetSale + aboveSale;
     let slider2, isFrist = false;
@@ -67,7 +76,8 @@ window.addEventListener("DOMContentLoaded", function(){
 
         inputCommi2.innerText = comm2.value;
         inputCommi3.innerText = comm3.value;
-        finalPrice.innerText = basic2.innerText = formatNumberWithCommas(Math.round(targetSaleRange2));
+        basic2.innerText = formatNumberWithCommas(Math.round(targetSaleRange));
+        finalPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2));
 
         aboveSale = targetSaleRange2 - targetSaleRange <= 0 ? 0 : targetSaleRange2 - targetSaleRange ;
         above.innerText = aboveSale <= 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
@@ -84,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function(){
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    function updateSlider(isInput, target) {
+    function updateSlider(isInput, target, input = '') {
         let xPercent, xPercent2, commValue, commValue2;
 
         if (isInput) {
@@ -117,20 +127,32 @@ window.addEventListener("DOMContentLoaded", function(){
         result2.innerText = formatNumberWithCommas(Math.round(commValue2 * (targetSaleRange2 - aboveSale)));        
         result3.innerText = formatNumberWithCommas(Math.round(commValue3 * aboveSale));
 
-        if ( target === 'handle') { 
+        let tabName = '';
+
+        wayToggleBtns.forEach((btn)=>{
+            if ( btn.classList.contains('on') ) {
+                tabName = btn.dataset.type;
+            }
+        })
+
+        if( tabName == 'fixed') {
             commPrice.innerText = result.innerText = formatNumberWithCommas(Math.round(commValue * targetSaleRange));
             resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange - (commValue * targetSaleRange)));
-        } else {                      
+        } else if( tabName == 'tiered') {
             if(aboveSale > 0)  {
                 commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * (targetSaleRange2 - aboveSale)) + (commValue3 * aboveSale)));
-                resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * (targetSaleRange2 - aboveSale)) + + (commValue3 * aboveSale))))
-            };
-        }        
+                resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * (targetSaleRange2 - aboveSale)) + (commValue3 * aboveSale))))
+            } else {
+                commPrice.innerText = total.innerText = result2.innerText = formatNumberWithCommas(Math.round(commValue2 * targetSaleRange));
+                resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange - (commValue2 * targetSaleRange)));
+            } 
+        }      
     }
 
     function updataInput(e) {     
         if(e.target.id == 'comm1') updateSlider(false, 'handle');
-        if(e.target.id == 'comm2' || e.target.id == 'comm3') updateSlider(false, 'handle2');
+        if(e.target.id == 'comm2') updateSlider(false, 'handle2', 'comm2');
+        if(e.target.id == 'comm3') updateSlider(false, 'handle2');
     }
 
     const slider = Draggable.create(handle, {
@@ -147,17 +169,6 @@ window.addEventListener("DOMContentLoaded", function(){
     comm3.addEventListener('input', updataInput);
 
     fixed();
-
-    const wayToggle = document.querySelector('.way-toggle');
-    const commiToggle = document.querySelector('.commi-toggle');
-    const infoToggle = document.querySelector('.info-toggle');
-    const wayToggleBtns = wayToggle.querySelectorAll('li');
-    const commiToggleList = commiToggle.querySelectorAll('li');
-    const infoToggleList = infoToggle.querySelectorAll('li');
-
-    const tooltip = document.querySelector('.tooltip');
-    const infoWrap = document.querySelector('.info-wrap');
-
 
     wayToggleBtns.forEach((btn, index)=>{
         btn.addEventListener('click', function(){

@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
     const maxRange = 6000000;
     let targetSale = targetSaleRange = 800000, aboveSale = 50000, finalPSale = targetSaleRange2 = targetSale + aboveSale;
-    let isFrist = false;
+    let slider2, isFrist = false;
 
     function fixed() {
         const handlePositionPercent = (targetSaleRange * 100 / maxRange);        
@@ -138,12 +138,7 @@ window.addEventListener("DOMContentLoaded", function(){
         onDragParams : [true, 'handle']
     });
 
-    const slider2 = Draggable.create(handle2, {
-        type: "x",
-        bounds: rangeSliderWrap2,
-        onDrag: updateSlider,
-        onDragParams : [true, 'handle2']
-    });
+    
 
     comm1.addEventListener('input', updataInput);
     comm2.addEventListener('input', updataInput);
@@ -173,11 +168,20 @@ window.addEventListener("DOMContentLoaded", function(){
             infoToggleList[index].classList.add('on');
 
             infoWrap.classList.remove('on')
-            
+
             if (index === 0) {
                 fixed();
 
             } else {
+                if(!isFrist) {
+                    isFrist = true;
+                    slider2 = Draggable.create(handle2, {
+                        type: "x",
+                        bounds: rangeSliderWrap2,
+                        onDrag: updateSlider,
+                        onDragParams : [true, 'handle2']
+                    });
+                }
                 tiered();
             }     
         })

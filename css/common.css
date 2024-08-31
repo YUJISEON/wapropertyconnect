@@ -96,6 +96,13 @@ body {
 .ptb-300 { padding: 300px 0  !important; }
 .ptb-350 { padding: 350px 0  !important; }
 
+.pt-5 { padding-top: 5px !important;}
+.pt-10 { padding-top: 10px !important;}
+.pt-20 { padding-top: 20px !important;}
+.pt-30 { padding-top: 30px !important;}
+.pt-40 { padding-top: 40px !important;}
+.pt-50 { padding-top: var(--rem-50px) !important;}
+
 /***** Text *****/
 
 .t-rw {overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; display:-webkit-box;  -webkit-box-orient:vertical; -moz-box-orient:vertical; word-break:break-all; word-wrap:break-word;}
@@ -355,6 +362,10 @@ textarea {
 	common
 ================================================== */
 
+.fc-white {
+    color: #fff;
+}
+
 .bg-color-white {
     background: #fff;
 }
@@ -567,7 +578,7 @@ textarea {
 }
 
 .box-list {
-    gap : 10px
+    /* gap : 10px */
 }
 
 .box-list.item-3 li {    
@@ -590,21 +601,41 @@ textarea {
 .box-list .box-inner {
     box-sizing: border-box;
     text-align: center;
-    padding: var(--rem-20px);
 }
 
 .box-list .box-inner.padding {
     padding: var(--rem-20px) var(--rem-20px) var(--rem-100px);
 }
 
-.box-list li figure {
+.box-list figure {
     text-align: center;
     font-size: var(--rem-40px);
 }
 
-.box-list li figure.img-box {
+.box-list figure.img-box {
     width: 100%;
     aspect-ratio: 1.5 / 1;
+}
+
+.box-list figure.img-round {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    overflow: hidden;
+}
+
+.box-list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -834,25 +865,3 @@ textarea {
 }
 
 /******************************************/
-
-
-figure.img-round {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 50%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-    -ms-flex-align: center !important;
-    align-items: center !important;
-    overflow: hidden;
-}
-
-figure.img-round img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}

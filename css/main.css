@@ -182,3 +182,12 @@
 .gm-style-iw-chr {
     display: none !important;
 }
+
+/* ==================================================
+    .main-section-09
+================================================== */
+
+.contact-infos .cantact-info {
+    font-size: var(--rem-16px);
+    color: rgba(255, 255, 255, 0.5);
+}

@@ -158,6 +158,10 @@ window.addEventListener("DOMContentLoaded", function(){
     const commiToggleList = commiToggle.querySelectorAll('li');
     const infoToggleList = infoToggle.querySelectorAll('li');
 
+    const tooltip = document.querySelector('.tooltip');
+    const infoWrap = document.querySelector('.info-wrap');
+
+
     wayToggleBtns.forEach((btn, index)=>{
         btn.addEventListener('click', function(){
             wayToggleBtns.forEach((wayBtn) => wayBtn.classList.remove('on'));
@@ -168,6 +172,8 @@ window.addEventListener("DOMContentLoaded", function(){
             commiToggleList[index].classList.add('on');
             infoToggleList[index].classList.add('on');
 
+            infoWrap.classList.remove('on')
+            
             if (index === 0) {
                 fixed();
 
@@ -177,4 +183,12 @@ window.addEventListener("DOMContentLoaded", function(){
         })
     })
 
+
+    tooltip.addEventListener('click', function(){
+        if( infoWrap.classList.contains('on')) {
+            infoWrap.classList.remove('on')
+        } else {
+            infoWrap.classList.add('on')
+        }
+    })
 });

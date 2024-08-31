@@ -54,6 +54,7 @@ body {
 .ml-auto { margin-left: auto !important;}
 .mr-auto { margin-right: auto !important;}
 .mb-auto { margin-bottom: auto !important;}
+.margin-0 { margin: 0 !important;}
 
 .mt-5 { margin-top: 5px !important;}
 .mt-10 { margin-top: 10px !important;}
@@ -364,7 +365,8 @@ textarea {
 ================================================== */
 
 .fs-18px { font-size: var(--rem-18px);} 
-
+.fs-16px { font-size: var(--rem-16px);} 
+.fs-14px { font-size: var(--rem-14px);} 
 
 .block { display: block;}
 
@@ -927,4 +929,28 @@ textarea {
     padding: var(--rem-20px) var(--rem-30px);
     line-height: 1.6;
     box-sizing: border-box;
+}
+
+/************************************/
+
+
+ figure.img-box {
+    /* width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    overflow: hidden; */
+}
+
+
+ figure.img-box img {
+    width: 100%;
+    /* height: 100%;
+    object-fit: cover; */
 }

@@ -86,58 +86,6 @@
     .main-section-07
 ================================================== */
 
-.main-section-07 {
-    font-size: var(--rem-16px);
-    line-height: 1.3636;
-}
-
-.why-box {
-    max-width: var(--inner-max-width-small);
-    margin: 0 auto;
-    font-family: var(--font-family-serif);
-}
-
-.why-box .why-list {
-    padding-right: var(--rem-50px);
-    box-sizing: border-box;
-}
-
-.why-box .why-list .depth1 > li,
-.why-box .why-list .depth2 > li {
-    position: relative;
-    padding-left: 15px;
-}
-
-.why-box .why-list .depth1 > li::before,
-.why-box .why-list .depth2 > li::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--base-color);
-}
-
-.why-box .why-list .depth2 > li::before {
-    background: none;
-    border: 1px solid var(--base-color);
-}
-
-.why-box .why-list .depth2 {
-    margin-left: 5px;
-}
-
-.why-box .why-add {
-    background: var(--base-color);
-    color: #fff;
-    padding: var(--rem-20px) var(--rem-30px);
-    line-height: 1.6;
-    box-sizing: border-box;
-}
-
 .route-box {
     margin-top: var(--rem-50px);
 }
@@ -187,6 +135,9 @@
     .main-section-09
 ================================================== */
 
+.contact-infos {
+
+}
 .contact-infos .cantact-info {
     font-size: var(--rem-16px);
     color: rgba(255, 255, 255, 0.5);

@@ -550,7 +550,7 @@
     max-width: calc(100% - 20px);
 }
 @media (max-width: 960px) {
-    .row-cols-2.gap-20px.gap-20px > * {
+    .row-cols-2.gap-20px.gap-20px:not(.small) > * {
         -ms-flex: 0 0 calc(100% - 20px);
         flex: 0 0 calc(100% - 20px);
         max-width: calc(100% - 20px);
@@ -559,7 +559,16 @@
    }
 }
 @media (max-width: 575px) {
-    .row-cols-2.gap-20px.gap-20px > * {
+    .row-cols-2.gap-20px.gap-20px:not(.small) > * {
+        -ms-flex: 0 0 calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin-top: 20px;
+        margin-left: 20px;
+   }
+}
+@media (max-width: 320px) {
+    .row-cols-2.gap-20px.gap-20px.small > * {
         -ms-flex: 0 0 calc(100% - 20px);
         flex: 0 0 calc(100% - 20px);
         max-width: calc(100% - 20px);
@@ -770,7 +779,7 @@
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-    
+
     .row-cols-2.gap-40px.gap-40px > * {
         -ms-flex: 0 0 calc(100% - 40px);
         flex: 0 0 calc(100% - 40px);
@@ -1185,11 +1194,11 @@
     max-width: calc(100% - 20px);
 }
 @media (max-width: 1280px) {
-    .row-cols-3.gap-20px {
+    .row-cols-3.gap-20px:not(.small) {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-    .row-cols-3.gap-20px.gap-20px > * {
+    .row-cols-3.gap-20px.gap-20px:not(.small) > * {
         -ms-flex: 0 0 calc(50% - 20px);
         flex: 0 0 calc(50% - 20px);
         max-width: calc(50% - 20px);
@@ -1198,7 +1207,7 @@
    }
 }
 @media (max-width: 768px) {
-    .row-cols-3.gap-20px.gap-20px > * {
+    .row-cols-3.gap-20px.gap-20px:not(.small) > * {
         -ms-flex: 0 0 calc(100% - 20px);
         flex: 0 0 calc(100% - 20px);
         max-width: calc(100% - 20px);
@@ -1206,6 +1215,30 @@
         margin-left: 20px;
    }
 }
+
+@media (max-width: 768px) {
+    .row-cols-3.gap-20px.small {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .row-cols-3.gap-20px.gap-20px.small > * {
+        -ms-flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin-top: 20px;
+        margin-left: 20px;
+   }
+}
+@media (max-width: 320px) {
+    .row-cols-3.gap-20px.gap-20px.small > * {
+        -ms-flex: 0 0 calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin-top: 20px;
+        margin-left: 20px;
+   }
+}
+
 .row-cols-3.gap-20px.type2 > .col-big {
     -ms-flex: 0 0 calc(59.703% - 20px);
     flex: 0 0 calc(59.703% - 20px);
@@ -1756,11 +1789,11 @@
     max-width: calc(100% - 20px);
 }
 @media (max-width: 1280px) {
-    .row-cols-4.gap-20px {
+    .row-cols-4.gap-20px:not(.small) {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-    .row-cols-4.gap-20px.gap-20px > * {
+    .row-cols-4.gap-20px.gap-20px:not(.small) > * {
         -ms-flex: 0 0 calc(50% - 20px);
         flex: 0 0 calc(50% - 20px);
         max-width: calc(50% - 20px);
@@ -1769,7 +1802,7 @@
    }
 }
 @media (max-width: 768px) {
-    .row-cols-4.gap-20px.gap-20px > * {
+    .row-cols-4.gap-20px.gap-20px:not(.small) > * {
         -ms-flex: 0 0 calc(100% - 20px);
         flex: 0 0 calc(100% - 20px);
         max-width: calc(100% - 20px);
@@ -1777,6 +1810,30 @@
         margin-left: 20px;
    }
 }
+
+@media (max-width: 768px) {
+    .row-cols-4.gap-20px.small {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .row-cols-4.gap-20px.gap-20px.small > * {
+        -ms-flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin-top: 20px;
+        margin-left: 20px;
+   }
+}
+@media (max-width: 320px) {
+    .row-cols-4.gap-20px.gap-20px.small > * {
+        -ms-flex: 0 0 calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
 .row-cols-4.gap-20px.type2 > .col-big {
     -ms-flex: 0 0 calc(59.703% - 20px);
     flex: 0 0 calc(59.703% - 20px);
@@ -3368,4 +3425,8 @@
     padding-top: var(--rem-40px);
     padding-left: var(--rem-40px);
     box-sizing: border-box;
+}
+
+.gap-30px {
+    gap: var(--rem-30px) !important;
 }

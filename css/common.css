@@ -706,15 +706,16 @@ textarea {
     color: var(--point-color);
 }
 
-.box-list.hover-color li {
+.hover-color > * {
     cursor: pointer;
 }
 
-.box-list.hover-color li:hover h3,
-.box-list.hover-color li:hover h4,
-.box-list.hover-color li:hover p,
-.box-list.hover-color li:hover span {
-    color: var(--point-color);
+.hover-color > *:hover h3,
+.hover-color > *:hover h4,
+.hover-color > *:hover p,
+.hover-color > *:hover span,
+.hover-color > *:hover b {
+    color: var(--point-color) ;
 }
 
 .box-list li .bg-color-white {

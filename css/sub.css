@@ -377,6 +377,14 @@
 	calculator
 ================================================== */
 
+.toggle-list li { 
+    display: none;
+}
+
+.toggle-list li.on { 
+    display: block;
+}
+
 .calculator-box {
     width: 100%;
     height: 100%;

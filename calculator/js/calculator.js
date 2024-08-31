@@ -3,93 +3,178 @@ window.addEventListener("DOMContentLoaded", function(){
     const rangeSliderWrap = document.getElementById("rangeSliderWrap");
     const rangeSlider = document.getElementById("rangeSlider");
     const handle = document.getElementById("handle");
+
     const rangeSliderWrap2 = document.getElementById("rangeSliderWrap2");
     const rangeSlider2 = document.getElementById("rangeSlider2");
     const handle2 = document.getElementById("handle2");
 
-    const basicPrice = document.querySelector(".basic-price");
-    const finalPrice = document.querySelector(".final-price");
-    const comm1 = document.getElementById("comm1");
-    const comm2 = document.getElementById("comm2");
-    const comm3 = document.getElementById("comm3");
+    let basicPrice = document.querySelector(".basic-price");
+    let finalPrice = document.querySelector(".final-price");
+    let comm1 = document.getElementById("comm1");
+    let comm2 = document.getElementById("comm2");
+    let comm3 = document.getElementById("comm3");
 
-    const commPrice = document.getElementById("commPrice");
-    const resultPrice = document.getElementById("resultPrice")
+    let commPrice = document.getElementById("commPrice");
+    let resultPrice = document.getElementById("resultPrice");
+
+    let basic = document.querySelector(".basic");
+    let inputCommi1 = document.querySelector(".input-commi1");
+    let result = document.querySelector(".result");    
+
+    let basic2 = document.querySelector(".basic2");
+    let above = document.querySelector(".above");    
+    let inputCommi2 = document.querySelector(".input-commi2");
+    let inputCommi3 = document.querySelector(".input-commi3");
+    let result2 = document.querySelector(".result2");
+    let result3 = document.querySelector(".result3");
+    let total = document.querySelector(".total");
+
     const maxRange = 6000000;
+    let targetSale = targetSaleRange = 800000, aboveSale = 50000, finalPSale = targetSaleRange2 = targetSale + aboveSale;
+    let isFrist = false;
 
-    function init() {
-        let changePrice = 800000,
-            commValue = parseFloat(comm1.value) / 100;
-        const handlePositionPercent = (changePrice * 100 / maxRange);        
+    function fixed() {
+        const handlePositionPercent = (targetSaleRange * 100 / maxRange);        
         const handleWidth = handle.offsetWidth;
         const handlePositionX = (handlePositionPercent * rangeSliderWrap.clientWidth / 100) - (handleWidth / 2);
-        
+
         gsap.set(handle, {x: handlePositionX });
         slider[0].update(); 
 
-        rangeSlider.style.width = handlePositionPercent + '%';
-        basicPrice.innerText = formatNumberWithCommas(Math.round(changePrice));
-        commPrice.innerText = formatNumberWithCommas(Math.round(commValue * changePrice));
-        resultPrice.innerText = formatNumberWithCommas(Math.round(changePrice - (commValue * changePrice)));
+        rangeSlider.style.width = handlePositionPercent + '%'; 
+        
+        let commValue = parseFloat(comm1.value) / 100; 
+        inputCommi1.innerText = comm1.value
+        basicPrice.innerText = basic.innerText = formatNumberWithCommas(Math.round(targetSaleRange));
+        commPrice.innerText = result.innerText = formatNumberWithCommas(Math.round(commValue * targetSaleRange));
+        resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange - (commValue * targetSaleRange)));
+    }
+
+    function tiered() {
+        fixed();
+
+        const handlePositionPercent2 = (targetSaleRange2 * 100 / maxRange);        
+        const handleWidth2 = handle.offsetWidth;
+        const handlePositionX2 = (handlePositionPercent2 * rangeSliderWrap.clientWidth  / 100) - (handleWidth2 / 2);
+
+        gsap.set(handle2, {x: handlePositionX2});
+        slider2[0].update(); 
+
+        rangeSlider2.style.width = (targetSaleRange2 * 100 / maxRange) + '%';
+
+        let commValue2 = parseFloat(comm2.value) / 100, 
+            commValue3 = parseFloat(comm3.value) / 100;
+
+        inputCommi2.innerText = comm2.value;
+        inputCommi3.innerText = comm3.value;
+        finalPrice.innerText = basic2.innerText = formatNumberWithCommas(Math.round(targetSaleRange2));
+
+        aboveSale = targetSaleRange2 - targetSaleRange < 0 ? 0 : targetSaleRange2 - targetSaleRange ;
+        above.innerText = aboveSale < 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
+
+        result2.innerText = formatNumberWithCommas(Math.round(commValue2 * targetSaleRange));        
+        result3.innerText = formatNumberWithCommas(Math.round(commValue3 * aboveSale));
+        commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * targetSaleRange) + (commValue3 * aboveSale)));
+        resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * targetSaleRange) + + (commValue3 * aboveSale))));
     }
 
     function formatNumberWithCommas(number) {
-        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        let price = Math.ceil(number / 10) * 10;
+
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    function updateSlider(isInput) {
-        let xPercent, xPercent2, changePrice, changePrice2, commValue, commValue2;
-        let target = 'handle';
+    function updateSlider(isInput, target) {
+        let xPercent, xPercent2, commValue, commValue2;
 
-        if(!isInput) {
-            target = this.target.classList.contains('handle2') && 'handle2';
+        if (isInput) {
+            if ( target === 'handle') {
+                xPercent = gsap.utils.mapRange(0, slider[0].maxX, 0, 100);
+                targetSaleRange = (maxRange * xPercent(slider[0].x)) * 0.01;
+                rangeSlider.style.width = xPercent(slider[0].x) + '%';
+            } else if ( target === 'handle2') {
+                xPercent2 = gsap.utils.mapRange(0, slider2[0].maxX, 0, 100);
+                targetSaleRange2 = (maxRange * xPercent2(slider2[0].x)) * 0.01;
+                rangeSlider2.style.width = xPercent2(slider2[0].x) + '%';
+            }
         }
 
-        if ( target === 'handle') {
-            xPercent = gsap.utils.mapRange(0, slider[0].maxX, 0, 100);
-            changePrice = (maxRange * xPercent(slider[0].x)) * 0.01;
-            commValue = parseFloat(comm1.value) / 100;
+        aboveSale = targetSaleRange2 - targetSaleRange < 0 ? 0 : targetSaleRange2 - targetSaleRange ;
+        above.innerText = aboveSale < 0 ? 0 : formatNumberWithCommas(Math.round(aboveSale)) ;
 
-            rangeSlider.style.width = xPercent(slider[0].x) + '%';
-        } else {
-            xPercent2 = gsap.utils.mapRange(0, slider2[0].maxX, 0, 100);
-            changePrice2 = (maxRange * xPercent2(slider2[0].x)) * 0.01;
-            commValue2 = parseFloat(comm2.value) / 100;
-
-            rangeSlider2.style.width = xPercent2(slider2[0].x) + '%';
-        }
-
+        commValue = parseFloat(comm1.value) / 100;
+        commValue2 = parseFloat(comm2.value) / 100;
+        commValue3 = parseFloat(comm3.value) / 100;
         comm1.value = parseFloat(comm1.value).toFixed(2);
-        basicPrice.innerText = formatNumberWithCommas(Math.round(changePrice));
-        commPrice.innerText = formatNumberWithCommas(Math.round(commValue*changePrice));
-        resultPrice.innerText = formatNumberWithCommas(Math.round(changePrice-(commValue*changePrice)));
+        comm2.value = parseFloat(comm2.value).toFixed(2);
+        comm3.value = parseFloat(comm3.value).toFixed(2);
+        inputCommi1.innerText = comm1.value
+        inputCommi2.innerText = comm2.value;
+        inputCommi3.innerText = comm3.value;
+
+        basicPrice.innerText = basic2.innerText = basic.innerText = formatNumberWithCommas(Math.round(targetSaleRange));
+        finalPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2));           
+        result2.innerText = formatNumberWithCommas(Math.round(commValue2 * (targetSaleRange2 - aboveSale)));        
+        result3.innerText = formatNumberWithCommas(Math.round(commValue3 * aboveSale));
+
+        if ( target === 'handle') { 
+            commPrice.innerText = result.innerText = formatNumberWithCommas(Math.round(commValue * targetSaleRange));
+            resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange - (commValue * targetSaleRange)));
+        } else {           
+            commPrice.innerText = total.innerText = formatNumberWithCommas(Math.round((commValue2 * (targetSaleRange2 - aboveSale)) + (commValue3 * aboveSale)));
+            resultPrice.innerText = formatNumberWithCommas(Math.round(targetSaleRange2 - ((commValue2 * (targetSaleRange2 - aboveSale)) + + (commValue3 * aboveSale))));
+        }        
     }
 
     function updataInput(e) {     
-        if(e.target.id == 'comm1') updateSlider(true);
-
-        // comm1.value = parseFloat(comm1.value).toFixed(2);
-        // basicPrice.innerText = formatNumberWithCommas(Math.round(changePrice));
-        // commPrice.innerText = formatNumberWithCommas(Math.round(commValue*changePrice));
-        // resultPrice.innerText = formatNumberWithCommas(Math.round(changePrice-(commValue*changePrice)));
+        if(e.target.id == 'comm1') updateSlider(false, 'handle');
+        if(e.target.id == 'comm2' || e.target.id == 'comm3') updateSlider(false, 'handle2');
     }
 
     const slider = Draggable.create(handle, {
         type: "x",
         bounds: rangeSliderWrap,
         onDrag: updateSlider,
-        onDragParams : [false]
+        onDragParams : [true, 'handle']
+    });
+
+    const slider2 = Draggable.create(handle2, {
+        type: "x",
+        bounds: rangeSliderWrap2,
+        onDrag: updateSlider,
+        onDragParams : [true, 'handle2']
     });
 
     comm1.addEventListener('input', updataInput);
     comm2.addEventListener('input', updataInput);
     comm3.addEventListener('input', updataInput);
 
-    const slider2 = Draggable.create(handle2, {
-        type: "x",
-        bounds: rangeSliderWrap2,
-        onDrag: updateSlider,
-    });
+    fixed();
 
-    init();
+    const wayToggle = document.querySelector('.way-toggle');
+    const commiToggle = document.querySelector('.commi-toggle');
+    const infoToggle = document.querySelector('.info-toggle');
+    const wayToggleBtns = wayToggle.querySelectorAll('li');
+    const commiToggleList = commiToggle.querySelectorAll('li');
+    const infoToggleList = infoToggle.querySelectorAll('li');
+
+    wayToggleBtns.forEach((btn, index)=>{
+        btn.addEventListener('click', function(){
+            wayToggleBtns.forEach((wayBtn) => wayBtn.classList.remove('on'));
+            commiToggleList.forEach((commiList) => commiList.classList.remove('on'));
+            infoToggleList.forEach((infoList) => infoList.classList.remove('on'));
+
+            this.classList.add('on');
+            commiToggleList[index].classList.add('on');
+            infoToggleList[index].classList.add('on');
+
+            if (index === 0) {
+                fixed();
+
+            } else {
+                tiered();
+            }     
+        })
+    })
+
 });

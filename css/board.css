@@ -1,0 +1,65 @@
+.board-area {
+    padding: var(--rem-50px);
+    border: 1px solid rgb(141 169 168 / 80%);
+}
+
+.board-area .board-head {
+    font-size: var(--rem-18px);
+}
+
+.board-area .board-head .profile figure {
+    width: 100px;
+    margin: 0;
+}
+
+.board-area .board-head .profile .name {
+    margin-left: var(--rem-20px);
+} 
+
+.board-area .board-body {
+    padding: var(--rem-30px) 0;
+}
+
+.board-area .board-body .title {
+    padding: var(--rem-15px) 0;
+    font-size: var(--rem-24px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.board-area .board-body .contents {
+    padding: var(--rem-15px) 0;
+    font-size: var(--rem-20px);
+    font-weight: 400;
+    line-height: 1.6;
+} 
+
+
+.board-area .board-body .contents img {
+    width: 100%;
+}
+
+.board-area .board-footer {
+
+}
+
+.board-area .board-footer .tags {
+    margin-top: - var(--rem-15px);
+}
+
+.board-area .board-footer .tags li {
+    display: inline-block;
+    margin-right: var(--rem-5px);
+    margin-top: var(--rem-15px);
+}
+
+.board-area .board-footer .tags li strong {
+    display: inline-block;
+    padding: var(--rem-10px) var(--rem-20px);
+    font-size: var(--rem-18px);
+    font-weight: 400;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid rgb(141 169 168 / 80%);
+}

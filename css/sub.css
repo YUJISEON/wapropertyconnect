@@ -524,4 +524,7 @@
     margin-top: var(--header-pc-height);
 }
 
+#subPage.post .body  {
+    max-width: var(   --inner-max-width-small);
+}
 

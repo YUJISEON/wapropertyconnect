@@ -13,13 +13,23 @@
 
     .contents-inner .layout figure {
         width: 100%;
-        min-width: none;
-        max-width: none;
+        min-width: auto !important;
+        max-width: none !important;
         overflow: visible;
         text-align: center;
     }
     
     .contents-inner .layout figure img {
-        object-fit: none;
+        height: auto;
+        object-fit: initial;
+    }
+
+    .contents-inner .row-float.img-left figure,
+    .contents-inner .row-float.img-right figure {
+        float: none; 
+        margin-right: 0;
+        margin-left: 0;
+        min-width: auto !important;
+        max-width: none !important;
     }
 }

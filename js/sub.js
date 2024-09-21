@@ -21,9 +21,9 @@ window.addEventListener('DOMContentLoaded', function(){
             
                 var formData = new FormData(this);
         
-                formData.append('service_id', 'service_berj6c8');
-                formData.append('template_id', 'template_v42hb05');
-                formData.append('user_id', 'nmWuFqNcSu-nC5H9Z');
+                formData.append('service_id', 'service_ij1d0en'); /* 계정2 */
+                formData.append('template_id', 'template_ree34j8');
+                formData.append('user_id', 'XVtihR0dquKd-jH1D');
             
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', 'https://api.emailjs.com/api/v1.0/email/send-form', true);

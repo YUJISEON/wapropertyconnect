@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-    const pageUrl = encodeURIComponent(window.location.href);
+    const pageUrl = decodeURIComponent(encodeURIComponent(window.location.href));
     const pageTitle = encodeURIComponent(document.title);
 
     document.getElementById('facebookShare').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;

@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 var formData = new FormData(this);
         
                 formData.append('service_id', 'service_ij1d0en'); /* 계정2 */
-                formData.append('template_id', 'template_ree34j8');
+                formData.append('template_id', 'template_w65j4lc');
                 formData.append('user_id', 'XVtihR0dquKd-jH1D');
             
                 var xhr = new XMLHttpRequest();

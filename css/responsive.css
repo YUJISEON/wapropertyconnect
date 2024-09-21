@@ -4,4 +4,22 @@
     .board-wrap .small .col-inner .thumbnail {
         aspect-ratio: 1 / 0.6;
     }
+
+    .contents-inner .row.img-right,
+    .contents-inner .row.img-left {
+        -ms-flex-direction: column  !important;
+        flex-direction: column !important;
+    }
+
+    .contents-inner .layout figure {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+        overflow: visible;
+        text-align: center;
+    }
+    
+    .contents-inner .layout figure img {
+        object-fit: none;
+    }
 }

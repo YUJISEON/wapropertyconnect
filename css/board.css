@@ -94,10 +94,9 @@
     line-height: 1.6;
 } 
 
-
-.board-area .board-body .contents img {
+/* .board-area .board-body .contents img {
     width: 100%;
-}
+} */
 
 .board-area .board-footer {
 
@@ -124,7 +123,6 @@
     border: 1px solid rgb(141 169 168 / 80%);
 }
 
-.share-btn
 
 .contents-inner .bg-color {
     padding: 0 var(--rem-20px);
@@ -169,6 +167,13 @@
 
 .contents-inner .align-right {
     text-align: right;
+}
+
+.contents-inner .align-left img,
+.contents-inner .align-center img ,
+.contents-inner .align-right img {
+    max-width: 100%;
+    width: auto;
 }
 
 .contents-inner ol {

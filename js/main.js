@@ -1,29 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', function(){
 
-    var agentSwiperer = new Swiper(".agentSwiper", {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        loop: true,
-        navigation: {
-            nextEl: ".agentSwiper + .swiper-button-next",
-            prevEl: ".agentSwiper + .swiper-button-prev",
-        },
-        breakpoints: {
-            481: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            769: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-            961: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-            },
-        },
-    });
+
 
 
     ///////////////////////////////////////////////////

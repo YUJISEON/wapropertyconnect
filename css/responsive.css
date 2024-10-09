@@ -71,6 +71,8 @@
 
     /***************************************/
 
+    .mt-50 { margin-top: calc(var(--rem-50px) * 0.8) !important;}
+
     section .inner {
         padding: var(--rem-40px) var(--rem-20px);
     }
@@ -318,12 +320,26 @@
         margin-left: -0;
         margin-top: var(--rem-10px);
     }
+
+    .calculator-box .cal-area {
+        padding: var(--rem-20px);    
+    }
+
+    .calculator-box .cal-area .target-box {
+        padding: 0 0 var(--rem-20px) 0;   
+    }
+
+    .calculator-box .cal-area .commission-box {
+        padding: var(--rem-20px) 0 0 0;   
+    }
+
+
 }
 
 @media (max-width: 375px){
 
     html {
-        font-size: 70%;
+        font-size: 75%;
     }
 
     .br-375px-none br{ display: none; }

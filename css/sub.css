@@ -510,6 +510,18 @@
     display: block;
 }
 
+.p-relative.swiper-area {
+    padding: 0 var(--rem-50px);
+}
+
+.p-relative.swiper-area .swiper-button-prev {
+    left: 0!important;
+}
+
+.p-relative.swiper-area .swiper-button-next {
+    right: 0;
+}
+
 .p-relative .swiper-button-prev,
 .p-relative .swiper-button-next {
     color: var(--point-color);

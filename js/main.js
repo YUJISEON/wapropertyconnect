@@ -1,6 +1,31 @@
 
 window.addEventListener('DOMContentLoaded', function(){
 
+    var swipsec01Swiperer = new Swiper(".sec01Swiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".main-section-01 .swiper-button-next",
+            prevEl: ".main-section-01 .swiper-button-prev",
+        },
+        breakpoints: {
+            481: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            769: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            961: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+
     ///////////////////////////////////////////////////
 
     function initMap() {

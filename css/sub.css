@@ -512,11 +512,11 @@
 }
 
 .p-relative .swiper-button-prev {
-    left: - 3.125rem !important;
+    left: -3.125rem !important;
 }
 
 .p-relative .swiper-button-next {
-    right: - 3.125rem;
+    right: -3.125rem;
 }
 
 #subPage.news,

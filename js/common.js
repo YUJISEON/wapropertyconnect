@@ -308,8 +308,8 @@ window.addEventListener('DOMContentLoaded', function(){
                 reviewContainer.innerHTML = reviewElement;
 
                 const reviewSwiper = new Swiper(".reviewSwiper", {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    spaceBetween: 10,
                     //loop: true,
                     pagination: {
                         el: ".swiper-pagination",
@@ -319,6 +319,20 @@ window.addEventListener('DOMContentLoaded', function(){
                     //     nextEl: ".swiper-button-next",
                     //     prevEl: ".swiper-button-prev",
                     // },
+                    breakpoints: {
+                        376: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        769: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        961: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                    },
                 });
             } else {
                 console.error('Error fetching reviews:', status);

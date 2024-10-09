@@ -12,6 +12,7 @@
     --point-color : #be6d54; 
     --font-base-color : #143852;
     --bg-base-color : #f1f1f1;
+    --dark-color: #000;
 
     /*font*/
     --font-family-base : "Roboto", sans-serif;
@@ -110,6 +111,7 @@
     --rem-16px: 1rem;
     --rem-18px: 1.125rem;
     --rem-20px : 1.25rem;
+    --rem-22px : 1.5rem;
     --rem-25px : 1.56rem;
     --rem-30px : 1.875rem;
     --rem-35px : 2.187rem;

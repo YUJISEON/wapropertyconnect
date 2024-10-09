@@ -282,6 +282,11 @@
         padding-top: var(--header-mobile-height);
     }
 
+    /**********************************************/
+
+    .board-area {
+        padding: var(--rem-20px);
+    }
 
 }
 
@@ -349,6 +354,14 @@
 
     html {
         font-size: 75%;
+    }
+
+    #header .mo-menu-btn {
+        right: var(--rem-10px);
+    }
+
+    .inner {
+        padding: 0 var(--rem-10px);
     }
 
     .br-375px-none br{ display: none; }

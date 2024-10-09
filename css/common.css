@@ -616,7 +616,7 @@ textarea {
     -ms-flex: auto;
     flex: auto;
     padding:  var(--rem-15px) 0;
-    font-size: var(--rem-14px);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1;
     color: #fff;

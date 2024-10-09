@@ -136,6 +136,7 @@
     #header .logo {
         margin-top: 0;
         text-align: left;
+        font-size: var(--rem-25px);
     } 
 
     #header .call-us {

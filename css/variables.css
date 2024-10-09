@@ -60,7 +60,7 @@
 
     --header-pc-height: 300px;        
     --header-tablet-height: 150px;   
-    --header-mobile-height: 100px; 
+    --header-mobile-height: 80px; 
 
     --contents-pc-padding-top: calc(var(--header-pc-height) + 1px);                
     --contents-tablet-padding-top: calc(var(--header-tablet-height) + 1px);       

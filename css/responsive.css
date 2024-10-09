@@ -1,6 +1,92 @@
 @charset "utf-8"; 
 
+.pc{display:block;} /*pc 노출 = 테블릿, 모바일 미노출*/
+.pcta{display:block;} /*pc, 테블릿 노출 = 모바일 미노출*/
+.mo{display:none !important;} /*모바일 노출 = pc,테블릿 미노출*/
+.ta{display:none !important;} /*테블릿, 모바일 노출 = pc 미노출*/
+
+@media (max-width: 1024px){
+    .pcta{display: none !important;}
+    .ta{display:block !important;}
+}
+
 @media (max-width: 768px) {
+
+    html {
+        font-size: 80%;
+    }
+
+	.pc{display: none !important;}
+    .mo{display:block !important;}
+
+    /***************************************/
+
+    #header .inner {
+        height: var(--header-mobile-height);   
+    }
+
+    #header .logo {
+        margin-top: 0;
+        text-align: left;
+    } 
+
+    #header .call-us {
+        width: 80%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1100;
+    }
+    
+    #header .gnb {
+        position :fixed;
+        top: 0;
+        left: 200%;
+        margin: 0;
+        height: 100svh;
+        padding-left: 20%;
+        z-index: 1100;
+    }
+
+    #header .gnb .gnb-inner {
+        height: 100%;
+        padding-top: var(--header-mobile-height);
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    #header .gnb ul.gnb-items {
+        width: 100%;        
+        position: relative;
+        -ms-flex-direction: column  !important;
+        flex-direction: column !important;
+        z-index: 1100;
+    }
+
+    #header .gnb ul.gnb-items > li {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        background: transparent;
+        color: var(--font-base-color);
+        text-align: left;
+        padding:  var(--rem-15px) var(--rem-30px);
+        box-sizing: border-box;
+    }
+
+    #header .gnb ul.gnb-items > li:first-child,
+    #header .gnb ul.gnb-items > li:last-child {
+        border-radius: 0;
+    }
+
+
+
+
+
+    /***************************************/
+
     .board-wrap .small .col-inner .thumbnail {
         aspect-ratio: 1 / 0.6;
     }
@@ -31,5 +117,13 @@
         margin-left: 0;
         min-width: auto !important;
         max-width: none !important;
+    }
+}
+
+
+@media (max-width: 375px){
+
+    html {
+        font-size: 70%;
     }
 }

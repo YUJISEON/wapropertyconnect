@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
     <title>WA PROPERTY CONNECT</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -19,7 +22,7 @@
     <script src="https://kit.fontawesome.com/326da5bcc4.js" crossorigin="anonymous"></script>
     <!-- common -->    
     <script defer src="../../js/common.js"></script>
-    <script defer src="../js/sub.js"></script>
+    <script defer src="../../js/sub.js"></script>
 </head>
 <body>
     <header id="header">
@@ -29,19 +32,29 @@
                     <h1 class="logo">
                         <a href="../../index.html" class="a-link">WA PROPERTY CONNECT</a>
                     </h1>
-                    <span class="sub-tit">Helping You with All Your Real Estate Needs in Perth</span>
-                    <span class="call-us">CALL US TODAY (08) 9486 0000</span>
-                    <nav class="gnb">
-                        <ul class="gnb-items row align-items-center justify-content-center">
-                            <li><a href="../../index.html" class="a-link">Home</a></li>
-                            <li><a href="../../agents/index.html" class="a-link">Find agents</a></li>
-                            <li><a href="../../calculator/index.html" class="a-link">Commission Calculator</a></li>
-                            <li><a href="../../news/index.html" class="a-link">Realestate News & Tips</a></li>
-                        </ul>
+                    <span class="sub-tit pc">Helping You with All Your Real Estate Needs in Perth</span>
+                    <span class="call-us pc">CALL US TODAY (08) 9486 0000</span>
+                    <nav class="gnb right-move">        
+                        <div class="gnb-inner">    
+                            <ul class="gnb-items row align-items-center justify-content-center">
+                                <li><a href="../../index.html" class="a-link">Home</a></li>
+                                <li><a href="../../agents/index.html" class="a-link">Find agents</a></li>
+                                <li><a href="../../calculator/index.html" class="a-link">Commission Calculator</a></li>
+                                <li class="on"><a href="../../news/index.html" class="a-link">Realestate News & Tips</a></li>
+                            </ul>
+                        </div> 
                     </nav>
+                    <div class="mo-menu-btn mo">
+                        <p class="btn-inner row flex-column justify-content-around">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </div>  
                 </div>
             </div>    
         </div>
+        <div class="gnb-bg"></div>
     </header>
     <main id="subPage" class="post">
         <section class="sub-section-01">

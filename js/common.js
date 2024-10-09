@@ -1,5 +1,127 @@
+$(function(){
+    // Mobile Ui 
+    var mobile = {
+        leftOpen : function(){
+            $('.gnb').stop().animate({'right':'0'}, 400,'easeInOutQuad');
+        },
+
+        leftClose : function(){
+            $('.gnb').stop().animate({'right':'200%'}, 400, 'easeInOutQuad');
+        },
+
+        rightOpen : function(){
+            $('.gnb').stop().animate({'left':'0'}, 400,'easeInOutQuad');
+        },
+
+        rightClose : function(){
+            $('.gnb').stop().animate({'left':'200%'}, 400, 'easeInOutQuad');
+        },
+
+        slideOpen : function(){
+            $('.gnb').stop().slideDown(400,'easeInOutQuad');
+        },
+
+        slideClose : function(){
+            $('.gnb').stop().slideUp(400, 'easeInOutQuad');
+        },
+
+        showOpen : function(){
+            $('.gnb').stop().fadeIn(0, 'easeInOutQuad');
+        },
+
+        showClose : function(){
+            $('.gnb').stop().fadeOut(0, 'easeInOutQuad');
+        },
+
+        down : function(target){
+            $(target).addClass('on');
+            $(target).next().stop().slideDown(400,'easeInOutQuad');
+            
+        },
+
+        up : function(target){
+            $(target).removeClass('on');
+            $(target).next().stop().slideUp(400, 'easeInOutQuad');
+        },
+
+        siblingsUp : function(target){
+            $(target).parent().siblings('li').children('a').removeClass('on');
+            $(target).parent().siblings('li').children('ul').stop().slideUp(400, 'easeInOutQuad');
+        },
+
+        bgOn : function(){
+            $('.gnb-bg').stop().fadeIn(400);
+            $('.gnb').addClass('on');
+            $("body").addClass("gnb-open");
+        },
+
+        bgOff : function(){
+            $('.gnb-bg').stop().fadeOut(400);
+            $('.gnb').removeClass('on');
+            $("body").removeClass("gnb-open");
+        }
+    }	
+
+    function gnbClickOn() {
+        $('.mo-menu-btn').off('click').on('click', function(){
+            $('.mo-menu-btn').toggleClass('on');
+            if( $(this).hasClass('on') ) {
+                if( $('.gnb').hasClass('left-move') ) {
+                    mobile.leftOpen();
+                } else if( $('.gnb').hasClass('right-move') ) {
+                    mobile.rightOpen();
+                } else if( $('.gnb').hasClass('slide-move') ) {
+                    mobile.slideOpen()
+                } else if( $('.gnb').hasClass('show-move') ) {
+                    mobile.showOpen()
+                }
+                mobile.bgOn();            
+            } else {
+                if( $('.gnb').hasClass('left-move') ) {
+                    mobile.leftClose();
+                } else if( $('.gnb').hasClass('right-move') ) {
+                    mobile.rightClose();
+                } else if( $('.gnb').hasClass('slide-move') ) {
+                    mobile.slideClose()
+                } else if( $('.gnb').hasClass('show-move') ) {
+                    mobile.showClose()
+                }
+                mobile.bgOff();            
+            }
+        })    
+    }
+
+    function gnbClickOff () {
+		$('.mo-menu-btn').off("click").on("click",function(e){
+			e.stopPropagation();
+		});
+	}
+
+    $(window).on("load resize", function(){
+		if (matchMedia("screen and (max-width: 768px)").matches) {
+			gnbClickOn();
+		}else {
+			gnbClickOff();
+
+            $('.mo-menu-btn').removeClass('on');
+            if( $('.gnb').hasClass('left-move') ) {
+                mobile.leftClose();
+            } else if( $('.gnb').hasClass('right-move') ) {
+                mobile.rightClose();
+            } else if( $('.gnb').hasClass('slide-move') ) {
+                mobile.slideClose()
+            } else if( $('.gnb').hasClass('show-move') ) {
+                mobile.showClose()
+            }
+            mobile.bgOff();   
+		}
+	});
+});
 
 window.addEventListener('DOMContentLoaded', function(){
+
+    ///////////////////////////////////////////////////////////
+
     gsap.registerPlugin(ScrollTrigger);
 
     const header = document.querySelector('#header');

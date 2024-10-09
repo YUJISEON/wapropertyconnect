@@ -33,7 +33,7 @@
 
     /******************************************/
 
-    #mainPage .agent-box {
+    .agent-box {
         padding: 0 var(--rem-50px);
     }
 }
@@ -44,6 +44,13 @@
 
     .lg-none { display: none; }
     .lg-block { display: block; }
+
+    
+    /**********************************************/
+
+    .calculator-box .way-toggle li {
+        font-size: calc(var(--rem-22px) * 0.8);
+    }
 
 }
 
@@ -63,6 +70,10 @@
     .md-block { display: block; }
 
     /***************************************/
+
+    section .inner {
+        padding: var(--rem-40px) var(--rem-20px);
+    }
     
     .con-tit h1 {
         font-size: calc(var(--rem-50px) * 0.8);
@@ -82,6 +93,10 @@
 
     .con-wrap {    
         padding-top: calc(var(--rem-30px) * 0.8);
+    }
+
+    .con-wrap .con-txt {
+        padding: 0 var(--rem-30px)  calc(var(--rem-50px) * 0.8);
     }
 
     .top-line {
@@ -182,6 +197,10 @@
     .box-list .box-inner.padding {
         padding: var(--rem-20px) var(--rem-20px) var(--rem-50px);
     }
+    
+    .box-wrap.full {
+        padding: var(--rem-20px);
+    }
 
     .box-list figure {
         font-size: calc(var(--rem-40px) * 0.8);
@@ -245,19 +264,45 @@
         min-width: auto !important;
         max-width: none !important;
     }
+
+    /**********************************************/
+
+    #subPage.finder {
+        padding-top: var(--header-mobile-height);
+    }
+
+
 }
 
 @media (max-width: 560px){
     .sm-none { display: none; }
     .sm-block { display: block; }
-    
+
     .br-560px-none br{ display: none; }
+
+    /***************************************/
+
+    .row-column-560px {
+        -ms-flex-direction: column  !important;
+        flex-direction: column !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+    }
 }
 
 @media (max-width: 480px){
 
 
     .br-480px-none br{ display: none; }
+
+    /***************************************/
+
+    .row-column-480px {
+        -ms-flex-direction: column  !important;
+        flex-direction: column !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+    }
 
     .search-area {
         -ms-flex-wrap: wrap;

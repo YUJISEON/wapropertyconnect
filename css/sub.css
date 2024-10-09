@@ -63,6 +63,10 @@
 	finder
 ================================================== */
 
+#subPage.finder {
+    padding-top: var(--header-pc-height);
+}
+
 #subPage.finder .sub-section,
 #subPage.finder .sub-section-02 .toggle-box {
     display: none;

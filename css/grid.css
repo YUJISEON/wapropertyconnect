@@ -4,8 +4,8 @@
 .row {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .row-wrap {
@@ -3411,53 +3411,63 @@
 }
 
 .gap-10 {
+    width: calc(100% + var(--rem-10px));
     margin-top: - var(--rem-10px);
     margin-left: - var(--rem-10px);
     box-sizing: border-box;
 }
 
 .gap-10 > * {
-    padding-top: var(--rem-10px);
-    padding-left: var(--rem-10px);
+    margin-top: var(--rem-10px);
+    margin-left: var(--rem-10px);
     box-sizing: border-box;
 }
 
 .gap-20 {
+    width: calc(100% + var(--rem-20px));
     margin-top: - var(--rem-20px);
     margin-left: - var(--rem-20px);
     box-sizing: border-box;
 }
 
 .gap-20 > * {
-    padding-top: var(--rem-20px);
-    padding-left: var(--rem-20px);
+    margin-top: var(--rem-20px);
+    margin-left: var(--rem-20px);
     box-sizing: border-box;
 }
 
 .gap-30 {
+    width: calc(100% + var(--rem-30px));
     margin-top: - var(--rem-30px);
     margin-left: - var(--rem-30px);
     box-sizing: border-box;
 }
 
 .gap-30 > * {
-    padding-top: var(--rem-30px);
-    padding-left: var(--rem-30px);
+    margin-top: var(--rem-30px);
+    margin-left: var(--rem-30px);
     box-sizing: border-box;
 }
 
+.gap-30  > .col-6 {
+    -ms-flex: 0 0 calc(50% - var(--rem-30px));
+    flex: 0 0 calc(50% - var(--rem-30px));
+    max-width: calc(50% - var(--rem-30px));
+}
+
 .gap-40 {
+    width: calc(100% + var(--rem-40px));
     margin-top: - var(--rem-40px);
     margin-left: - var(--rem-40px);
     box-sizing: border-box;
 }
 
 .gap-40 > * {
-    padding-top: var(--rem-40px);
-    padding-left: var(--rem-40px);
+    margin-top: var(--rem-40px);
+    margin-left: var(--rem-40px);
     box-sizing: border-box;
 }
 
-.gap-30px {
+.gap-30 {
     gap: var(--rem-30px) !important;
 }

@@ -1,13 +1,13 @@
 
 window.addEventListener('DOMContentLoaded', function(){
 
-    var swipsec01Swiperer = new Swiper(".sec01Swiper", {
+    var agentSwiperer = new Swiper(".agentSwiper", {
         slidesPerView: 2,
         spaceBetween: 10,
         loop: true,
         navigation: {
-            nextEl: ".main-section-01 .swiper-button-next",
-            prevEl: ".main-section-01 .swiper-button-prev",
+            nextEl: ".agentSwiper + .swiper-button-next",
+            prevEl: ".agentSwiper + .swiper-button-prev",
         },
         breakpoints: {
             481: {

@@ -4,7 +4,7 @@
 	공통레이아웃
 ================================================== */
 
-html {
+html,body,th,td,input,select,textarea,button {
     font-family: var(--font-family-base);
 }
 
@@ -372,9 +372,11 @@ textarea {
 }
 
 
-.serif {
-    font-family: var(--font-family-serif);
-}
+.serif { font-family: var(--font-family-serif); }
+.ubuntu { font-family: var(--font-family-ubuntu); }
+.libre-franklin { font-family: var(--font-family-libre-franklin); }
+.poppins { font-family: var(--font-family-poppins); }
+.figtree { font-family: var(--font-family-figtree); }
 
 
 /* ==================================================
@@ -386,6 +388,8 @@ textarea {
 .fs-14px { font-size: var(--rem-14px);} 
 
 .block { display: block;}
+
+.font-bold-300 { font-weight: 300 !important;}
 
 .lh-1 { line-height: 1;}
 .lh-12 { line-height: 1.2;}
@@ -453,6 +457,7 @@ textarea {
 
 .con-tit h2 {
     display: inline-block;
+    font-family: var(--font-family-figtree);
     font-size: var(--rem-40px);
     font-weight: 700;
     line-height: 1;
@@ -554,9 +559,9 @@ textarea {
 
 #header  .logo {
     margin-top: var(--rem-30px);
-    font-family: var(--font-family-anton);
+    font-family: var(--font-family-ubuntu);
     font-size: var(--rem-35px);
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1;
     color: var(--font-base-color);
 } 
@@ -572,11 +577,13 @@ textarea {
     margin-top: var(--rem-10px);
     background: #000;
     color: #fff;
+    font-weight: 300;
 }
 
 #header span.call-us {
     margin-top: var(--rem-20px);
-    font-weight: 600;
+    font-weight: 400;
+    font-family: var(--font-family-poppins);
 }
 
 #header .gnb {
@@ -641,7 +648,7 @@ textarea {
 
 #header .mo-menu-btn {
     display: block;
-    position: fixed;
+    position: absolute;
     top: calc(calc(var(--header-mobile-height) - var(--rem-50px)) / 2);
     /* top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1033,6 +1040,10 @@ textarea {
     margin: 0 auto;
     font-family: var(--font-family-serif);
     font-size: var(--rem-18px);
+}
+
+.why-box b {
+    font-family: var(--font-family-base);
 }
 
 .why-box .why-list {

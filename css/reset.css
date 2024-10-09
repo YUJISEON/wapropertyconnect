@@ -16,9 +16,9 @@ html, body{
 	-moz-font-size-adjust:none;
 }
 body,th,td,input,select,textarea,button {
-      font-size:1.5rem;
+      font-size:1.6rem;
       line-height:1.6;
-      font-family: 'Noto Sans KR', sans-serif; 
+      /* font-family: var(--font-family-base), sans-serif;  */
       color:#222;
      word-break:keep-all; word-wrap:break-word;
 }

@@ -71,7 +71,15 @@
 
     /***************************************/
 
+    .mt-40 {margin-top: var(--rem-10px) !important;}
+
     .mt-50 { margin-top: calc(var(--rem-50px) * 0.8) !important;}
+    .pt-50 { padding-top: calc(var(--rem-50px) * 0.8) !important;}
+    .pb-80 { padding-bottom: calc(var(--rem-80px) * 0.8) !important;}
+
+    #subPage.news, #subPage.post {
+        margin-top: var(--header-mobile-height);
+    }
 
     section .inner {
         padding: var(--rem-40px) var(--rem-20px);

@@ -524,7 +524,7 @@
 
 .p-relative .swiper-button-prev,
 .p-relative .swiper-button-next {
-    color: var(--point-color);
+    color: var(--base-color);
 }
 
 .p-relative .swiper-button-prev {

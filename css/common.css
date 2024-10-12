@@ -805,6 +805,16 @@ textarea {
     object-fit: cover;
 }
 
+.box-list figure img.ico-img {
+    width: 30%;
+    max-width: var(--rem-100px);
+    object-fit: contain;
+}
+
+.box-list figure.img-round img.ico-img {
+    width: 60%;
+}
+
 
 .box-list li h4 {    
     margin-top: var(--rem-10px);

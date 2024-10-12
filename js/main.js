@@ -1,7 +1,54 @@
 
 window.addEventListener('DOMContentLoaded', function(){
 
+    // 숫자를 천 단위로 쉼표를 넣어주는 함수
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
 
+    function countAnimation() {
+        var countBoxes = document.querySelectorAll('.count-box');
+
+        countBoxes.forEach(function(countBox) {
+            if (!countBox.classList.contains('counted')) {
+                countBox.classList.add('counted');
+                var countText = countBox.querySelector('.count-text');
+                var stop = parseInt(countText.getAttribute('data-stop'), 10);
+                var speed = parseInt(countText.getAttribute('data-speed'), 10);
+                var start = parseInt(countText.innerText.replace(/,/g, ''), 10);
+                var startTime = null;
+
+                function animateCount(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = timestamp - startTime;
+                    var currentCount = Math.min(start + (progress / speed) * (stop - start), stop);
+
+                    countText.innerText = formatNumber(Math.floor(currentCount));
+
+                    if (progress < speed) {
+                        requestAnimationFrame(animateCount);
+                    } else {
+                        countText.innerText = formatNumber(stop);
+                    }
+                }
+
+                requestAnimationFrame(animateCount);
+            }
+        });
+    }
+
+    // IntersectionObserver를 사용하여 요소가 화면에 보이는지 감지
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                countAnimation();
+            }
+        });
+    }, { threshold: 0 });
+
+    document.querySelectorAll('.count-box').forEach(function(box) {
+        observer.observe(box);
+    });
 
 
     ///////////////////////////////////////////////////

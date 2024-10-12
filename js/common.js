@@ -1,4 +1,6 @@
 $(function(){
+    AOS.init();
+    
     // Mobile Ui 
     var mobile = {
         leftOpen : function(){

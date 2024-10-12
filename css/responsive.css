@@ -12,6 +12,10 @@
     .xl-block { display: block; }
 
     .br-1280px-none br{ display: none; }
+
+    .sub-visual .parallax-area .parallax-bg {
+        background-position: right 40% center;
+    }
 }
 
 @media (max-width: 1024px){
@@ -277,6 +281,10 @@
     }
 
     /**********************************************/
+
+    .sub-visual .parallax-area .parallax-bg {
+        background-position: right 35% center;
+    }
 
     #subPage.finder {
         padding-top: var(--header-mobile-height);

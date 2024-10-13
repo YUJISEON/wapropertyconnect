@@ -561,3 +561,11 @@
     max-width: var(   --inner-max-width-small);
 }
 
+.guideSwiper {
+    padding: var(--rem-50px) 0 !important;
+}
+
+.guideSwiper .swiper-slide-active figure {
+    box-shadow: 3px 5px 38px 0px rgba(18, 18, 17, 0.2);
+}
+

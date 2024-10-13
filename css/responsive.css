@@ -359,7 +359,9 @@
         padding: var(--rem-20px) 0 0 0;   
     }
 
-
+    .guideSwiper .swiper-slide-active figure {
+        box-shadow : none;
+    }
 }
 
 @media (max-width: 375px){

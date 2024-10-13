@@ -400,6 +400,7 @@ textarea {
 	common
 ================================================== */
 
+.pt-none { padding-top: 0 !important;}
 
 .xl-none { display: block; }
 .lg-none { display: block; }
@@ -411,29 +412,14 @@ textarea {
 .md-block { display: none; }
 .sm-block { display: none; }
 
-.fc-white {
-    color: #fff;
-}
+.fc-gray { color: dimgray ;}
+.fc-white { color: #fff; }
+.fc-font { color: var(--font-base-color) !important; }
 
-.fc-font {
-    color: var(--font-base-color) !important;
-}
-
-.bg-color-white {
-    background: #fff;
-}
-
-.bg-color-sky {
-    background: rgb(193, 211, 228);
-}
-
-.bg-color-gray {
-    background: #f1f1f1;
-}
-
-.bg-color-point {
-    background: var(--base-color);
-}
+.bg-color-white { background: #fff;}
+.bg-color-sky {background: rgb(193, 211, 228);}
+.bg-color-gray {  background: #f1f1f1;}
+.bg-color-point { background: var(--base-color);}
 
 .bg-color-point .con-tit h3,
 .bg-color-point .con-wrap .con-txt {

@@ -16,7 +16,8 @@ window.addEventListener("DOMContentLoaded", function(){
         const section1 = document.getElementById('section1');
         const section2 = document.getElementById('section2');
         const steps = [step1, step2_01, step2_02, step2_03, step3, step4, step5_01, step5_02];
-        
+        let stepsHistory = ['step1'];
+
         const backBtn = document.querySelectorAll('.back');
         const nextStep = document.getElementById('nextStep');
         const prevStep = document.getElementById('prevStep');
@@ -47,9 +48,11 @@ window.addEventListener("DOMContentLoaded", function(){
                 if( option1.value === 'Buy') {
                     step2_01.classList.add('active');
                     nextStep.value = "step2-01";
+                    stepsHistory.push("step2-01");
                 } else {
                     step2_02.classList.add('active');
                     nextStep.value = "step2-02";
+                    stepsHistory.push("step2-02");
                 }
     
                 prevStep.value = "step1";
@@ -64,6 +67,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 step2_01.classList.remove('active');
                 step2_02.classList.add('active');
                 nextStep.value = "step2-02";
+                stepsHistory.push("step2-02");
 
                 if( option1.value === 'Buy') {
                     progressStep[2].classList.add('on');
@@ -84,9 +88,11 @@ window.addEventListener("DOMContentLoaded", function(){
                 if( option1.value === 'Rent') {
                     step2_03.classList.add('active');
                     nextStep.value = "step2-03";
+                    stepsHistory.push("step2-03");
                 } else {
                     step3.classList.add('active');
                     nextStep.value = "step3";
+                    stepsHistory.push("step3");
                     progressStep[2].classList.add('on');
                 }
 
@@ -101,6 +107,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 step2_03.classList.remove('active');
                 step5_02.classList.add('active');
                 nextStep.value = "step5-02";
+                stepsHistory.push("step5-02");
 
                 progressStep[2].classList.add('on');
                 progressStep[3].classList.add('on');
@@ -118,6 +125,7 @@ window.addEventListener("DOMContentLoaded", function(){
                 step3.classList.remove('active');
                 step4.classList.add('active');
                 nextStep.value = "step4";
+                stepsHistory.push("step4");
 
                 progressStep[3].classList.add('on');
 
@@ -151,67 +159,37 @@ window.addEventListener("DOMContentLoaded", function(){
         });
 
         backBtn.forEach(btn => { 
-            btn.addEventListener('click', () => { 
-                let nextValue = nextStep.value;
+            btn.addEventListener('click', () => {
                 let prevValue = prevStep.value;
-                let changePrevStep = '';
-
-                console.log(nextValue, prevValue);
+                let historyNum = 0;
 
                 steps.forEach(step => {
                     step.classList.remove('active');
-                    if( step.classList.contains('active') ) {
-                        // changePrevStep = step.getAttribute('id');
-                    }
                 })
 
                 progressStep.forEach(progress => {
                     progress.classList.remove('on');
                 })
 
-                if (prevValue === 'step1') {
-                    endNum = 1;     
-                    step1.classList.add('active');
-                    nextStep.value = 'step1';
-                }
+                stepsHistory.forEach((history, index) => {
+                    if ( history == prevValue) {
+                        historyNum = index;
+                        document.getElementById(history).classList.add('active');
+                    }
+                })
 
-                if (prevValue === 'step2-01') {
-                    endNum = 2;       
-                    step2_01.classList.add('active');
-                    nextStep.value = 'step2-01';
-                }
+                prevStep.value = stepsHistory[historyNum - 1];
+                nextStep.value = stepsHistory[historyNum];
+                stepsHistory.splice(historyNum + 1);
 
-                if (prevValue === 'step2-02') {
-                    endNum = 2;     
-                    step2_02.classList.add('active');
-                    nextStep.value = 'step2-02';
-                }
-
-                if (prevValue === 'step2-03') {
-                    endNum = 2;     
-                    step2_03.classList.add('active');
-                    nextStep.value = 'step2-03';
-                }
-
-                if (prevValue === 'step3') {
-                    endNum = 3;     
-                    step3.classList.add('active');
-                    nextStep.value = 'step3';
-                }
-
-                if (prevValue === 'step4') {
-                    endNum = 4;   
-                    step4.classList.add('active');
-                    nextStep.value = 'step4';
-                }
+                if (prevValue === 'step1') { endNum = 1; }
+                if (prevValue === 'step2-01' || prevValue === 'step2-02' || prevValue === 'step2-03') {endNum = 2; }
+                if (prevValue === 'step3') {  endNum = 3;}
+                if (prevValue === 'step4') { endNum = 4; }
 
                 for (let i=0;i<endNum;i++) {
                     progressStep[i].classList.add('on');
                 }
-                
-                setTimeout(function(){
-                    prevStep.value = nextValue;
-                })
             });
         });
 
@@ -228,13 +206,13 @@ window.addEventListener("DOMContentLoaded", function(){
             const tl = gsap.timeline()
             .from(items, {
                 scale: 0.5,
-                // repeat: -1,
-                // yoyo : true,
+                repeat: 3,
+                yoyo : true,
                 stagger: {
-                    each: 0.5,
+                    each: 0.2,
                     //repeatDelay : 1.5
                 },
-                ease: "Power3.inOut",
+                ease: "Power1.inOut",
                 transformOrigin:"50% 50%",
 
             })

@@ -232,7 +232,7 @@ section .inner {
 .check-box > input[type="checkbox"]:checked ~ label:before{ background-image:url('../img/common/ico_check.svg'); background-size:12px 12px; background-repeat:no-repeat; background-position:center;}
 
 .check-items .check-box{ position:relative !important; left:0 !important; top: 0 !important; transform: translate(0, 0) !important;}
-.check-items .check-box{float: left !important; margin-right: 25px !important;}
+.check-items .check-box{float: left !important; margin-right: 25px !important; margin-top: 3px;}
 .check-items .check-box:last-child{margin-right: 0 !important;}
 .check-items .check-box label {  padding-left: 26px !important; font-size: var(--rem-16px) !important; }
 

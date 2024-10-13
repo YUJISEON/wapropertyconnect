@@ -292,6 +292,10 @@
 
     /**********************************************/
 
+    .step-box .mt-40 {
+        margin-top: var(--rem-40px) !important;
+    }
+
     .board-area {
         padding: var(--rem-20px);
     }

@@ -208,6 +208,4 @@ window.addEventListener("DOMContentLoaded", function(){
             infoWrap.classList.add('on')
         }
     })
-
-  
 });

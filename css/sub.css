@@ -161,7 +161,16 @@
 }
 
 .sel-list > div:hover {
-    top: -10px;
+    /* transform: translateY(-10px); */
+}
+
+.sel-list > div:hover .row {
+    background: var(--base-color);
+}
+
+.sel-list > div:hover .col-inner figure,
+.sel-list > div:hover .col-inner span {
+    color: #fff;
 }
 
 .sel-list > div .row {
@@ -170,6 +179,11 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.07);
+    transition:all .4s ease; 
+    -webkit-transition:all .4s ease; 
+    -ms-transition:all .4s ease; 
+    -moz-transition:all .4s ease; 
+    -o-transition:all .4s ease; 
 }
 
 .sel-list .col-inner figure {

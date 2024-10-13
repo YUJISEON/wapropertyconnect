@@ -15,6 +15,11 @@ window.addEventListener("DOMContentLoaded", function(){
         const step5_02 = document.getElementById('step5-02');
         const section1 = document.getElementById('section1');
         const section2 = document.getElementById('section2');
+        const steps = [step1, step2_01, step2_02, step2_03, step3, step4, step5_01, step5_02];
+        
+        const backBtn = document.querySelectorAll('.back');
+        const nextStep = document.getElementById('nextStep');
+        const prevStep = document.getElementById('prevStep');
     
         const option1 = document.getElementById('step1-option');
         const option2_01 = document.getElementById('step2-01-option');
@@ -24,96 +29,118 @@ window.addEventListener("DOMContentLoaded", function(){
         const option4 = document.getElementById('step4-option');
         const option5_01 = document.getElementById('step5-01-option');
     
-        const step1Options = step1.querySelectorAll('.col-inner');
-        const step2Options_01 = step2_01.querySelectorAll('.col-inner');
-        const step2Options_02 = step2_02.querySelectorAll('.col-inner');
-        const step2Options_03 = step2_03.querySelectorAll('.col-inner');
-        const step3Options = step3.querySelectorAll('.col-inner');
-        const step4Options = step4.querySelectorAll('.col-inner');
-        const step5Options_01 = step5_01.querySelectorAll('.col-inner');
+        const step1Options = step1.querySelectorAll('.sel-list > div');
+        const step2Options_01 = step2_01.querySelectorAll('.sel-list > div');
+        const step2Options_02 = step2_02.querySelectorAll('.sel-list > div');
+        const step2Options_03 = step2_03.querySelectorAll('.sel-list > div');
+        const step3Options = step3.querySelectorAll('.sel-list > div');
+        const step4Options = step4.querySelectorAll('.sel-list > div');
+        const step5Options_01 = step5_01.querySelectorAll('.sel-list > div');
         const progressStep = progress.querySelectorAll('li');
     
         step1Options.forEach(option => {
             option.addEventListener('click', () => {
-                option1.value = option.getAttribute('data-step1');
+                option1.value = option.querySelector('.col-inner').getAttribute('data-step1');
     
                 step1.classList.remove('active');
                 
                 if( option1.value === 'Buy') {
                     step2_01.classList.add('active');
+                    nextStep.value = "step2-01";
                 } else {
                     step2_02.classList.add('active');
+                    nextStep.value = "step2-02";
                 }
     
+                prevStep.value = "step1";
                 progressStep[1].classList.add('on');
             });
         });
     
         step2Options_01.forEach(option => {
             option.addEventListener('click', () => {
-                option2_01.value = option.getAttribute('data-step2-01');
+                option2_01.value = option.querySelector('.col-inner').getAttribute('data-step2-01');
     
                 step2_01.classList.remove('active');
                 step2_02.classList.add('active');
+                nextStep.value = "step2-02";
 
                 if( option1.value === 'Buy') {
                     progressStep[2].classList.add('on');
                 }
+
+                prevStep.value = "step2-01";
                 progressStep[1].classList.add('on');
             });
         });
     
         step2Options_02.forEach(option => {
             option.addEventListener('click', () => {
-                option2_02.value = option.getAttribute('data-step2-02');
+                option2_02.value = option.querySelector('.col-inner').getAttribute('data-step2-02');
     
                 step2_02.classList.remove('active');
+                
+
                 if( option1.value === 'Rent') {
                     step2_03.classList.add('active');
+                    nextStep.value = "step2-03";
                 } else {
                     step3.classList.add('active');
+                    nextStep.value = "step3";
                     progressStep[2].classList.add('on');
                 }
+
+                prevStep.value = "step2-02";
             });
         });
     
         step2Options_03.forEach(option => {
             option.addEventListener('click', () => {
-                option2_03.value = option.getAttribute('data-step2-03');
+                option2_03.value = option.querySelector('.col-inner').getAttribute('data-step2-03');
     
                 step2_03.classList.remove('active');
                 step5_02.classList.add('active');
+                nextStep.value = "step5-02";
 
                 progressStep[2].classList.add('on');
                 progressStep[3].classList.add('on');
                 progressStep[4].classList.add('on');
+
+                prevStep.value = "step2-03";
             });
         });
         
     
         step3Options.forEach(option => {
             option.addEventListener('click', () => {
-                option3.value = option.getAttribute('data-step3');
+                option3.value = option.querySelector('.col-inner').getAttribute('data-step3');
     
                 step3.classList.remove('active');
                 step4.classList.add('active');
+                nextStep.value = "step4";
+
                 progressStep[3].classList.add('on');
+
+                prevStep.value = "step3";
             });
         });
     
         step4Options.forEach(option => {
             option.addEventListener('click', () => {
-                option4.value = option.getAttribute('data-step4');
+                option4.value = option.querySelector('.col-inner').getAttribute('data-step4');
     
                 step4.classList.remove('active');
                 step5_01.classList.add('active');
+                nextStep.value = "step5-01";
                 progressStep[4].classList.add('on');
+
+                prevStep.value = "step4";
             });
         });
     
         step5Options_01.forEach(option => {
             option.addEventListener('click', () => {
-                option5_01.value = option.getAttribute('data-step5-01');
+                option5_01.value = option.querySelector('.col-inner').getAttribute('data-step5-01');
     
                 step5_01.classList.remove('active');
                 section1.classList.remove('active');
@@ -122,6 +149,73 @@ window.addEventListener("DOMContentLoaded", function(){
                 loadingAni();
             });
         });
+
+        backBtn.forEach(btn => { 
+            btn.addEventListener('click', () => { 
+                let nextValue = nextStep.value;
+                let prevValue = prevStep.value;
+                let changePrevStep = '';
+
+                console.log(nextValue, prevValue);
+
+                steps.forEach(step => {
+                    step.classList.remove('active');
+                    if( step.classList.contains('active') ) {
+                        // changePrevStep = step.getAttribute('id');
+                    }
+                })
+
+                progressStep.forEach(progress => {
+                    progress.classList.remove('on');
+                })
+
+                if (prevValue === 'step1') {
+                    endNum = 1;     
+                    step1.classList.add('active');
+                    nextStep.value = 'step1';
+                }
+
+                if (prevValue === 'step2-01') {
+                    endNum = 2;       
+                    step2_01.classList.add('active');
+                    nextStep.value = 'step2-01';
+                }
+
+                if (prevValue === 'step2-02') {
+                    endNum = 2;     
+                    step2_02.classList.add('active');
+                    nextStep.value = 'step2-02';
+                }
+
+                if (prevValue === 'step2-03') {
+                    endNum = 2;     
+                    step2_03.classList.add('active');
+                    nextStep.value = 'step2-03';
+                }
+
+                if (prevValue === 'step3') {
+                    endNum = 3;     
+                    step3.classList.add('active');
+                    nextStep.value = 'step3';
+                }
+
+                if (prevValue === 'step4') {
+                    endNum = 4;   
+                    step4.classList.add('active');
+                    nextStep.value = 'step4';
+                }
+
+                for (let i=0;i<endNum;i++) {
+                    progressStep[i].classList.add('on');
+                }
+                
+                setTimeout(function(){
+                    prevStep.value = nextValue;
+                })
+            });
+        });
+
+        
         
 
         function loadingAni() {

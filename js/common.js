@@ -129,6 +129,10 @@ window.addEventListener('DOMContentLoaded', function(){
             slidesPerView: 2,
             spaceBetween: 10,
             loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             navigation: {
                 nextEl: ".agentSwiper + .swiper-button-next",
                 prevEl: ".agentSwiper + .swiper-button-prev",

@@ -232,6 +232,10 @@
     margin-top: var(--rem-40px);
 }
 
+.person-list {
+    overflow: hidden;
+}
+
 .person-list .img-person {
     width: 120px;
     height: 120px;

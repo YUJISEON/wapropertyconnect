@@ -201,11 +201,11 @@ window.addEventListener("DOMContentLoaded", function(){
             const resultBox = document.getElementById('resultBox');
 
             const personList = document.getElementById('personList');
-            const items = gsap.utils.toArray(personList.querySelectorAll('li'));
+            const items = gsap.utils.toArray(personList.querySelectorAll('li .img-person'));
 
             const tl = gsap.timeline()
             .from(items, {
-                scale: 0.5,
+                scale: 0.65,
                 repeat: 3,
                 yoyo : true,
                 stagger: {
